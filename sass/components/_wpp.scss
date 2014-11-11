@@ -1,0 +1,205 @@
+.wpp {
+	.row {
+		padding: 0;
+
+		.pane {
+			margin-bottom: 20px;
+
+			&:first-child {
+				margin-top: 0;
+			}
+
+			&.mgBtZero {
+				margin-bottom: 0;
+			}
+		}
+	}
+	.img-wrapper {
+		height: 334px;
+		border: 1px solid #ccc;
+		padding: 0 8px;
+		display: table-cell;
+		vertical-align: middle;
+		box-sizing: border-box;
+
+		&.hero {
+			height: 688px;
+			border: none;
+			padding: 0;
+			overflow: hidden;
+			display: block;
+		}
+		&.box-large {
+			height: 688px;
+			border: none;
+			padding: 0;
+		}
+		&.info {
+			height: 216px;
+			background-color: #fff;
+		}
+	}
+	img {
+		width: 100%;
+	}
+
+	.info {
+		background-color: #fff;
+
+		.pane {
+			margin-bottom: 0!important;
+
+			p {
+				margin: 20px 20px 0 0;
+			}
+		}
+	}
+} //end .wpp
+
+// @media all and (max-width: 1900px) {
+// 	.wpp {
+// 		.img-wrapper {
+// 			height: 334px;
+
+// 			&.hero {
+// 				height: 688px;
+// 			}
+// 			&.box-large {
+// 				height: 688px;
+// 			}
+// 			&.info {
+// 				height: 216px;
+// 			}
+// 		}
+// 	}
+// }
+
+@media all and (max-width: 1430px) {
+	.wpp {
+		.img-wrapper {
+			height: 229px;
+
+			&.hero {
+				height: 478px;
+			}
+			&.box-large {
+				height: 478px;
+			}
+			&.info {
+				height: 146px;
+			}
+		}
+
+		.info {
+
+			.pane {
+				p {
+					margin-top: 0;
+				}
+			}
+		}
+	}
+}
+
+@media all and (max-width: 1023px) {
+	.wpp {
+		.img-wrapper {
+			height: 172px;
+
+			&.hero {
+				height: 364px;
+			}
+			&.box-large {
+				height: 364px;
+			}
+			&.info {
+				height: 108px;
+			}
+		}
+		&.resp {
+			.img-wrapper {
+				height: 364px;
+
+				&.hero {
+					height: 494px;
+				}
+				&.info {
+					height: 108px;
+				}
+			}
+		}
+	}
+}
+
+@media all and (max-width: 767px) {
+	.wpp {
+		.row {
+			.pane {
+				margin-bottom: 4%;
+
+				&.base3 .base3 {
+						margin-bottom: 19%;
+					}
+
+				.pane {
+					margin-bottom: 7%;
+				}
+			}
+		}
+
+		.img-wrapper {
+			height: 20.1vw;
+
+			&.hero {
+				height: 43.8vw;
+			}
+			&.box-large {
+				height: 43.8vw;
+			}
+			&.info {
+				height: 19.1vw;
+			}
+		}
+
+		&.resp {
+			.img-wrapper {
+				height: 44vw;
+
+				&.hero {
+					height: 60vw;
+				}
+				&.info {
+					height: 19.1vw;
+				}
+			}
+		}
+	}
+}
+
+@media all and (max-width: 480px) {
+	.wpp {
+		.v5 {
+			.pane {
+				margin-left: 0!important;
+
+				p {
+					margin-left: 18%;
+				}
+			}
+		}
+	}
+}
+
+@media all and (max-width: 320px) {
+	.wpp {
+		&.resp {
+			.row {
+				.pane {
+					float: none;
+					width: 100%!important;
+					margin-left: 0;
+				}
+			}
+		}
+	}
+}
