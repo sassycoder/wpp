@@ -4,6 +4,8 @@ module.exports = function (grunt) {
   require('load-grunt-tasks')(grunt);
   
   grunt.loadNpmTasks('grunt-text-replace');
+  grunt.loadNpmTasks('grunt-bake');
+
   grunt.initConfig({
     watch: {
       compass: {
@@ -18,6 +20,11 @@ module.exports = function (grunt) {
           'assets/js/lib/*.js'
         ],
         tasks: ['build']
+      },
+
+      bake: {
+        files: [ "templates/**/*.html" ],
+        tasks: "bake:build"
       }
     },
 
@@ -59,6 +66,17 @@ module.exports = function (grunt) {
       }
     },
 
+    bake: {
+      build: {
+        files: {
+            "index.html": "templates/structure/index.html",
+            "layout1.html": "templates/layout/layout1.html",
+            "layout2.html": "templates/layout/layout2.html",
+            "modal.html": "templates/components/modal.html"
+        }
+      }
+    },
+
     compass: {
       clean: {
         options: {
@@ -84,6 +102,6 @@ module.exports = function (grunt) {
     }
   });
 
-  grunt.registerTask('build', ['compass:clean', 'compass:dist', 'concat', 'uglify', 'replace']);
+  grunt.registerTask('build', ['compass:clean', 'compass:dist', 'concat', 'uglify', 'bake:build', 'replace']);
   grunt.registerTask('default', ['build']);
 };

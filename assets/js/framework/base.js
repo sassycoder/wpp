@@ -326,6 +326,7 @@ $(function () {
 
 $(function () {
   var body = $('body');
+  $(body).addClass('framework');
 
   //toggle grid
   $(document).on( 'click', '.toggle-grid', function(e) {
