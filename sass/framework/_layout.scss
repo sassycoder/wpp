@@ -1,8 +1,8 @@
-// .wrapper {
+// .main {
 //   width: 1852px;
 //   margin: auto;
 // }
-// body.gutterless .wrapper {
+// body.gutterless .main {
 //   width: 1848px;
 //   margin: auto;
 // }
@@ -198,9 +198,19 @@
 }
 
   .wrapper {
-    width: 896px;
-    margin: auto;
+    min-height: 100%;
+    margin: 0 auto -63px; /* the bottom margin is the negative value of the footer's height */
   }
+
+  .push {
+    height: 63px; /* .push must be the same height as .footer */
+  }
+
+  .main {
+    width: 896px;
+    margin: auto;    
+  }
+
   .row {
     .pane.dw-mgZero {
       margin-left: 0;
@@ -291,7 +301,7 @@
       display: none;
     }
   }
-  body.gutterless .wrapper {
+  body.gutterless .main {
     width: 1392px;
     margin: auto;
   }
@@ -338,7 +348,7 @@
     }
   }
 @media all and(max-width: 1430px) {
-  .wrapper {
+  .main {
     width: 896px;
     margin: auto;
   }
@@ -479,13 +489,13 @@
       display: none;
     }
   }
-  body.gutterless .wrapper {
+  body.gutterless .main {
     width: 972px;
     margin: auto;
   }
 }
 @media all and(max-width: 1023px) {
-  .wrapper {
+  .main {
     width: 748px;
     margin: auto;
   }
@@ -677,13 +687,13 @@
       display: none;
     }
   }
-  body.gutterless .wrapper {
+  body.gutterless .main {
     width: 744px;
     margin: auto;
   }
 }
 @media all and(max-width: 767px) {
-  .wrapper {
+  .main {
     width: 93.6%;
     margin: 0 3.2%;
   }
@@ -1398,7 +1408,7 @@
       }
     }
   }
-  body.gutterless .wrapper {
+  body.gutterless .main {
     width: 93.6%;
     margin: 0 3.2%;
   }
@@ -1435,7 +1445,7 @@
   }
 }
 @media all and(max-width: 480px) {
-  .wrapper {
+  .main {
     width: 93.6%;
     margin: 0 3.2%;
   }
@@ -1758,7 +1768,7 @@
       }
     }
   }
-  body.gutterless .wrapper {
+  body.gutterless .main {
     width: 93.6%;
     margin: 0 3.2%;
   }
