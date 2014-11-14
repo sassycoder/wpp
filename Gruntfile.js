@@ -35,7 +35,8 @@ module.exports = function (grunt) {
       },
 
       all: [
-        'Gruntfile.js'
+        'Gruntfile.js',
+        'assets/js/components/*.js'
       ]
     },
 

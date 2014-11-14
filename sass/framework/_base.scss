@@ -205,9 +205,11 @@ header {
 }
 
 .wrapper-header {
-    width: 896px;
-    margin: 34px auto 50px;
-    color: #fff;    
+    color: #fff;
+
+    &.main {
+      margin: 34px auto 50px;
+    }
 
     h1 {
       float: left;
@@ -242,13 +244,10 @@ header {
 }
 
 .nav {
-  width: 896px;
-  margin: 0 auto;
   color: #fff;
 
   .search {
-    float: left;
-    width: 390px;
+    float: right;
     font-size: 18px;
     font-size: 1.8rem;
     line-height: 18px;
@@ -272,12 +271,11 @@ header {
 
     .global-search {
       display: none;
-      float: left;
+      float: right;
       margin: 0;
       border-radius: 0;
       height: 38px;
-      width: 326px;
-      padding-left: 13px;
+      width: 0;
     }
 
     &.search-on {
@@ -287,6 +285,7 @@ header {
       }
       .global-search {
         display: inline;
+        padding-left: 13px;
       }
 
       .show-search {
@@ -327,12 +326,7 @@ footer {
       &:hover, &:active, &:focus {
         text-decoration: underline;
       }
-    }
-
-    .wrapper {
-      width: 896px;
-      margin: 0 auto;
-    }   
+    } 
 
     .social-icon {    
       float: left;
@@ -352,7 +346,41 @@ footer {
 
 }
 
-@media all and (max-width: 767px) {
+@media all and (max-width: 1023px) {
+
+    .header-actions {
+      display: none;
+    } 
+
+    .nav .search {
+      position: absolute;
+      right: 105px;
+      top: 25px;
+      margin: 0;
+
+      .show-search {
+        margin: 0;
+        width: 45px;
+        height: 46px;
+
+        &:before {
+          right: 11px;
+          font-size: 28px;
+          top: 11px;
+        }
+
+        span {
+          display: none;
+        }
+      }
+
+      .global-search {
+        position: absolute;
+        top: 46px;
+        right: 0;
+      }
+    }
+
     .wrapper>footer {
         padding:29px 0 33px
     }
@@ -360,5 +388,11 @@ footer {
     .gutterless .wrapper>footer {
         padding: 29px 0 33px
     }
+}
+
+@media all and (max-width: 767px) {
+  .wrapper-header h1 {
+    width: 210px;
+  }
 }
 

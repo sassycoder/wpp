@@ -37,7 +37,7 @@
 <div class="wrapper">
 
 	<header>
-		<div class="wrapper-header primary cf">
+		<div class="main wrapper-header primary cf">
 			<h1>
 				<a href="../waitrose_demo/index.html">
 					<span>Waitrose</span>  Press Pack <em>Spring</em> 2015
@@ -54,16 +54,15 @@
 		</div>
 	
 	
-			<div class="nav cf">
+			<div class="nav main cf">
 					<!-- START Navigation -->
 				<nav id="primary-navigation" class="component megamenu-container cf">
-	      <div class="nav-btn mega-btn">
-	        <a href="#">
-	          <span>Mega Menu</span>
-	        </a>
+	      <div class="nav-btn mega-btn icon_menu">
+	        <a href="#" class="icon_menu"></a>
 	      </div>
 	
 	      <div class="megamenu-list">
+	      	<a class="home mobile" href="../waitrose_demo/index.html">Home</a>
 	        <ol class="megamenu">
 	          <li class="site-section first">
 	            <a href="#" class="top-level-item"><span class="arrow_carrot-down">Valentine's Day</span></a>
@@ -71,12 +70,19 @@
 	
 	            <div class="mega-drop">
 							  <div class="inner cf">
-						        <ul>
+						        <ul class="menu-items">
 						          <li><a href="">Baking &amp; Cookery</a></li>
 						          <li><a href="">His &amp; Her Beauty</a></li>
 						          <li><a href="">Chocs, Lollies &amp; DIY</a></li>
 						          <li><a href="">Cakes &amp; Bakes</a></li>
 						          <li><a href="">Flowers</a></li>
+						        </ul>
+						        <ul class="mobile">
+						        	<li><a href="">Your Lightbox</a></li>
+						        	<li><a href="">Log out</a></li>
+						        	<li><a href="">Contact Us</a></li>
+						        	<li><a href="">Waitrose Media Centre</a></li>
+						        	<li><a href="">Privacy Policy</a></li>
 						        </ul>
 							  </div>
 							</div>
@@ -88,12 +94,19 @@
 	
 	            <div class="mega-drop">
 							  <div class="inner cf">
-					        <ul>
+					        <ul class="menu-items">
 					          <li><a href="">Sewing</a></li>
 					          <li><a href="">Mum's On The Go</a></li>
 					          <li><a href="">Cakes &amp; Glassware</a></li>
 					          <li><a href="">Flowers</a></li>
 					        </ul>
+					        <ul class="mobile">
+						        	<li><a href="">Your Lightbox</a></li>
+						        	<li><a href="">Log out</a></li>
+						        	<li><a href="">Contact Us</a></li>
+						        	<li><a href="">Waitrose Media Centre</a></li>
+						        	<li><a href="">Privacy Policy</a></li>
+						        </ul>
 					      </div>
 							</div>
 	          </li>
@@ -104,7 +117,7 @@
 	
 	            <div class="mega-drop">
 							  <div class="inner cf">
-					        <ul>
+					        <ul class="menu-items">
 					          <li><a href="">Eggs For Adults</a></li>
 					          <li><a href="">Woodland Friends</a></li>
 					          <li><a href="">Cakes &amp; Bakes</a></li>
@@ -112,6 +125,13 @@
 					          <li><a href="">Seasonal Non-Food</a></li>
 					          <li><a href="">Flowers</a></li>
 					        </ul>
+					        <ul class="mobile">
+						        	<li><a href="">Your Lightbox</a></li>
+						        	<li><a href="">Log out</a></li>
+						        	<li><a href="">Contact Us</a></li>
+						        	<li><a href="">Waitrose Media Centre</a></li>
+						        	<li><a href="">Privacy Policy</a></li>
+						        </ul>
 					      </div>
 							</div>
 	          </li>
@@ -122,9 +142,9 @@
 	    </nav>
 	    	<!-- END Navigation -->
 	
-				<div class="search">
-					<input id="global-search" class="global-search" name="global-search" placeholder="Search" type="text" value="">
+				<div class="search">				
 					<a href="#" class="show-search icon_search"><span>Search</span></a>
+					<input id="global-search" class="global-search" name="global-search" placeholder="Search" type="text" value="" data-width="326px">
 				</div>
 			</div>	
 	</header><!-- end header -->
@@ -161,14 +181,14 @@
 </div><!-- .wrapper -->
 
 		<footer class="cf">
-			<div class="wrapper">
+			<div class="main">
 				<div class="row">
-					<div class="pane base8 ml12">
+					<div class="pane base8 tp7 ml12">
 			            <p class="border">All content copyright © 2014 Waitrose</p>
 			            <a href="#">Privacy Policy</a>
 		
 					</div>
-					<div class="pane base4 ml12">
+					<div class="pane base4 tp5 ml12">
 						<p>Follow us</p>
 						<a href="#" class="social-icon social_facebook"></a>
 						<a href="#" class="social-icon social_twitter"></a>
@@ -182,7 +202,7 @@
 		</footer><!-- footer -->
 		
 		<script type="text/javascript" src="assets/js/lib.min.js"></script>
-		<script type="text/javascript" src="assets/js/framework.min.js"></script>
+		<script type="text/javascript" src="assets/js/framework.js"></script>
 		<script type="text/javascript" src="assets/js/components.min.js"></script>
 
 		<div id="alimir_bootmodal" class="modal fade" tabindex="-1" data-width="370" data-backdrop="static" data-keyboard="false" style="display: none;">

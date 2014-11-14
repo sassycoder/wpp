@@ -59,7 +59,7 @@
   $document.on('click', '.nav-btn', function (ev) {
     var $this = $(this)
       , needsToOpen = ! $this.hasClass('open')
-      , $controls = $this.closest('#main-header')
+      , $controls = $this.closest('.nav')
       , dropdownSelector = '.search-box, .megamenu-list';
 
     $controls.find('.nav-btn').removeClass('open');
@@ -82,7 +82,7 @@
       $menu.parent().find('.nav-btn').removeClass('open');
 
 
-      if ($(this).innerWidth() > 767) {
+      if ($(this).innerWidth() > 1008) {
         $menu.show();
       }
       else {
