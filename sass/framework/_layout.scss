@@ -6,6 +6,34 @@
 //   width: 1848px;
 //   margin: auto;
 // }
+
+//for variable width panes e.g. switching different view modes
+@for $i from 1 through 11 {
+  .pane.base#{$i}-#{$i + 1} { @extend .base#{$i}; }
+}
+
+.toggle-mode {
+
+  .row .pane {
+    &.tm-mgZero {
+      margin-left: 0;
+    }
+  }
+
+  @for $i from 1 through 11 {
+    .pane.base#{$i}-#{$i + 1} { @extend .base#{$i + 1}; }
+  }
+
+}
+
+@media (max-width: 767px) {
+  .toggle-mode {
+    @for $i from 1 through 11 {
+      .pane.base#{$i}-#{$i + 1}.ml12 { width: 100%; margin-left:0; }
+    }
+  }
+}
+
 .row {
   width: 100%;
   float: left;
@@ -260,6 +288,7 @@
       width: 0;
       display: none;
     }
+
     &.ds1 {
       width: 60px;
     }
@@ -701,7 +730,7 @@
       &.ml12 {
         width: 100%;
         float: left;
-        margin-left: 0;
+        margin-left: 0!important;
         &:first-child {
           margin-left: 0;
         }
@@ -1776,6 +1805,7 @@
     margin-left: 4%;
   }
 }
+
 .left {
   float: left;
 }

@@ -1,5 +1,9 @@
 @charset "CP850";
 
+* {
+  box-sizing: border-box;
+}
+
 html {
     overflow-y: scroll;
     font-size: 62.5%
@@ -145,6 +149,29 @@ ul li,ol li {
     margin: 0;
     padding: 0;
     list-style-type: none;
+}
+
+.bttn {
+  padding: 0 12px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 36px;
+  line-height: 3.6rem;
+  font-family: 'WaitroseBold';
+  border: none;
+  background-color: #8adade;
+  display: block;
+  cursor: pointer;
+  -webkit-appearance: button;
+  -webkit-border-radius: 0;
+  outline: none;
+  width: 100%;
+
+  &:hover, &:active, &:focus {
+    background-color: #fbb831;
+  }
 }
 
 .actions {
