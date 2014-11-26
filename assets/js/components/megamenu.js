@@ -20,7 +20,7 @@
             if ($(ev.target).closest('.megamenu-list').length === 0) {
               $menu.find('.top-level-item').removeClass('active');
               $menu.find('.mega-drop').hide();
-              console.log(ev);
+              //console.log(ev);
             }
           };
 

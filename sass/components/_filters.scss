@@ -1,0 +1,110 @@
+.component.filters {
+	.bttn {
+		border: 1px solid $btn_primary;
+
+		&.secondary {
+			text-transform: uppercase;
+		}
+	}
+
+	.close {
+		margin-top: 0;
+		position: absolute;
+		right: -10px;
+		top: -12px;
+		text-shadow: none;
+		background-color: #86dade;
+		opacity: 1;
+		filter: alpha(opacity=100);
+		color: #fff;
+		font-size: 36px;
+		width: 36px;
+		border-radius: 20px;
+		line-height: 26px;
+		@extend .icon_close;
+
+		&:hover, &:active, &:focus {
+			background-color: #fdb813;
+		}
+	}
+
+	.view-toggles {
+		float: right;
+	}
+
+	.facets {
+		float: left;
+		width: 100%;
+		background:url("/assets/img/structure/white-line.png") 50% 0 repeat-y $btn_primary;
+    background-size: 100%;
+    position: relative;
+
+		h3 {
+			color: #fff;
+		}
+
+		.bttn {
+			border-color: #fff;
+			text-transform: none;
+
+			&:active, &:focus, &:hover, &.active {
+				color: $btn_primary_col;
+			}
+		}
+
+		.panel {
+			padding: 16px;
+			border-top: 1px solid #fff;
+			&:first-child {
+				border-top: none;
+			}
+
+			&.price {
+				h3 { padding-bottom: 0; }
+			}
+			&.themes {
+				padding-left: 0;
+
+				h3 { padding-bottom: 0; }
+			}
+		}
+
+		.pane {
+			margin-bottom: 0;
+		}
+	}
+
+	.irs {
+		height: 50px;
+	}
+
+	.irs-line {
+		background: transparent;
+		border-color: #fff;
+		top: 13px;
+	}
+
+	.irs-bar {
+		border-color: #fff;
+		background: #fff;
+		top: 13px;
+	}
+
+	.irs-slider {
+		background: #000;
+		border-color: #000;
+		top: 5px;
+	}
+
+	.irs-from, .irs-to, .irs-single {
+		bottom: -5px;
+		top: auto;
+		color: #000;
+		background: transparent;
+	}
+
+	.irs-hidden-input {
+		display: none;
+	}
+
+}

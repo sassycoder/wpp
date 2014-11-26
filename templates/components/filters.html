@@ -26,46 +26,19 @@
 			<div class="pane base12 component-header">
 
 				<!-- START: COMPONENT DETAILS -->
-				<h2>Component: Infobox</h2>
+				<h2>Component: Filters</h2>
 
-				<p><strong>Description:</strong> Infobox to show images and text.</p>
+				<p><strong>Description:</strong> Filter elements.</p>
 				<!-- END: COMPONENT DETAILS -->
 
 			</div><!-- .pane -->
 		</div>
 
     <div class="row">
-    	<div class="pane base3-4 ml12">
-        <span class="base-desc">.base3</span>
-        <!--(bake /templates/components/_infobox.html)-->
+    	<div class="pane base12">
+        <span class="base-desc">.base12</span>
+        <!--(bake /templates/components/_filters.html)-->
     	</div>
-      <div class="pane base3-4 ml12">
-        <span class="base-desc">.base3</span>
-        <!--(bake /templates/components/_infobox.html)-->
-      </div>
-      <div class="pane base3-4 ml12">
-        <span class="base-desc">.base3</span>
-        <!--(bake /templates/components/_infobox.html)-->
-      </div>
-      <div class="pane base3-4 ml12 tm-mgZero">
-        <span class="base-desc">.base3</span>
-        <!--(bake /templates/components/_infobox.html)-->
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="pane base4 ml12">
-        <span class="base-desc">.base4</span>
-        <!--(bake /templates/components/_infobox_contact.html)-->
-      </div>
-      <div class="pane base4 ml12">
-        <span class="base-desc">.base4</span>
-        <!--(bake /templates/components/_infobox_contact.html)-->
-      </div>
-      <div class="pane base4 ml12">
-        <span class="base-desc">.base4</span>
-        <!--(bake /templates/components/_infobox_contact.html)-->
-      </div>
     </div>
 
 	</div><!-- .main -->
@@ -73,6 +46,23 @@
 </div><!-- .wrapper -->
 
 		<!--(bake /templates/structure/footer.html)-->
+		<script type="text/javascript">
+      var rangeFrom = $('#rangeSliderFrom'),
+          rangeTo = $('#rangeSliderTo');
 
+      $("#rangeSlider").ionRangeSlider({
+        type: "double",
+        min: 0,
+        max: 100,
+        from: 12,
+        to: 32,
+        hide_min_max: true,
+        prefix: '£',
+        onFinish: function (data) {
+            $(rangeFrom).val(data.from);
+            $(rangeTo).val(data.to);
+        }
+    });
+    </script>
 	</body>
 </html>

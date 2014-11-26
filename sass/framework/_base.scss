@@ -1,5 +1,14 @@
 @charset "CP850";
 
+// Theme vars
+
+$btn_primary: #8adade;
+$btn_primary_hover: #fbb831;
+$btn_primary_active: #fff;
+$btn_primary_col: #000;
+$btn_secondary_col: #fff;
+
+
 * {
   box-sizing: border-box;
 }
@@ -118,10 +127,13 @@ h2 {
 }
 
 h3 {
-    font-size: 22px;
-    font-size: 2.2rem;
-    padding: 10px 0 10px;
-    margin: 0
+    font-size: 18px;
+    font-size: 1.8rem;
+    line-height: 21px;
+    line-height: 2.1rem;
+    padding: 0 0 10px;
+    margin: 0;
+    font-family: 'WaitroseBold'; 
 }
 
 h4 {
@@ -153,7 +165,6 @@ ul li,ol li {
 
 .bttn {
   padding: 0 12px;
-  margin: 0 auto;
   text-align: center;
   font-size: 16px;
   font-size: 1.6rem;
@@ -161,16 +172,78 @@ ul li,ol li {
   line-height: 3.6rem;
   font-family: 'WaitroseBold';
   border: none;
-  background-color: #8adade;
+  background-color: $btn_primary;
+  color: $btn_primary_col;
   display: block;
   cursor: pointer;
-  -webkit-appearance: button;
+  //-webkit-appearance: button;
   -webkit-border-radius: 0;
   outline: none;
-  width: 100%;
+  width: auto;
 
   &:hover, &:active, &:focus {
-    background-color: #fbb831;
+    background-color: $btn_primary_hover;
+    text-decoration: none;
+  }
+
+  &.secondary {
+    color: $btn_secondary_col;
+
+    &:hover, &:focus, &:active {
+      background-color: $btn_primary_active;
+      color: $btn_primary;
+    }
+  }
+
+  &.active {
+    background-color: $btn_primary_active;
+    color: $btn_primary;
+  }
+
+  &.filters {
+    float: left;
+    border-radius: 4px;
+    margin: 0 10px 0 0;
+  }
+
+  &.toggle {
+    float: left;
+    border-radius: 0;
+
+    &.start { border-radius: 4px 0 0 4px; }
+    &.end { border-radius: 0 4px 4px 0; border-left: none; }
+  }
+
+  &.theme {
+    float: left;
+    color: #fff;
+    border-radius: 4px;
+    margin-right: 10px;
+    margin-top: 10px;
+    line-height: 14px;
+    line-height: 1.4rem;
+    font-family: WaitroseRegular;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    &:active, &:focus, &:hover {
+      background-color: #fff;
+      color: #000;
+    }
+  }
+
+  &.reset {
+    @extend .theme;
+    float: right;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  &.view-grid, &.view-list {
+    width: 44px;
+    text-indent: -9999px;
   }
 }
 
@@ -301,7 +374,7 @@ header {
       float: right;
       margin: 0;
       border-radius: 0;
-      height: 38px;
+      height: 46px;
       width: 0;
     }
 
