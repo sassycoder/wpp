@@ -73,7 +73,10 @@ module.exports = function (grunt) {
             'index.html': 'templates/structure/index.html',
             'layout1.html': 'templates/layout/layout1.html',
             'layout2.html': 'templates/layout/layout2.html',
-            'modal.html': 'templates/components/modal.html'
+            'modal.html': 'templates/components/modal.html',
+            'infobox.html': 'templates/components/infobox.html',
+            'filters.html': 'templates/components/filters.html',
+            'style-guide.html': 'templates/structure/style-guide.html'
         }
       }
     },

@@ -9,7 +9,7 @@
 
     var isDesktopEv = $(ev.currentTarget).hasClass('top-level-item');
 
-    if ($(window).innerWidth() < 1024 && isDesktopEv && isResponsive) {
+    if ($(window).innerWidth() < 1023 && isDesktopEv && isResponsive) {
       return true;
     } else {
 
@@ -20,7 +20,7 @@
             if ($(ev.target).closest('.megamenu-list').length === 0) {
               $menu.find('.top-level-item').removeClass('active');
               $menu.find('.mega-drop').hide();
-              console.log(ev);
+              //console.log(ev);
             }
           };
 
@@ -81,8 +81,7 @@
       var $menu = $('.megamenu-list');
       $menu.parent().find('.nav-btn').removeClass('open');
 
-
-      if ($(this).innerWidth() > 1024) {
+      if ($(this).innerWidth() > 1023) {
         $menu.show();
       }
       else {

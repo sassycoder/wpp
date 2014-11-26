@@ -1,0 +1,153 @@
+.component.infobox {
+	position: relative;
+	background-color:#fff;
+	border: 1px solid #d6d6d6;
+	transition: all .2s ease-out;
+
+	.img-wrapper {
+		border: none;
+	}
+
+	.wrapper-info {
+		position: relative;
+		width: 100%;
+		background-color: #fff;
+
+		.expand {
+			background: #fff;
+			padding: 10px 0 15px;
+		}
+	}
+
+	.bttn {
+		display: none;
+		width: 92px;
+		margin: 10px auto 0;
+
+		.icon {
+			line-height: 16px;
+			line-height: 1.6rem;
+		}
+		.text {
+			text-transform: uppercase;
+		}
+	}
+
+	.title,
+	.price {
+		text-align: center;
+	}
+
+	&:hover, &:active, &:focus {
+		box-shadow: 0px 6px 12px 0px rgba(50,50,50,0.55);
+		.expand {
+			margin-top: -46px;
+
+			.bttn {
+				display: block;
+			}
+		}
+	}
+}
+
+//toggle-mode layout
+.toggle-mode .component.infobox {
+	.img-wrapper {
+		float: left;
+		height: auto;
+		@extend .pane.base2;
+	}
+
+	.wrapper-info {
+		position: absolute;
+		right: 0;
+		margin-left: 16px;
+		height: 100%;
+		@extend .pane.base2;
+	}
+
+	.bttn {
+		display: block;
+		position: absolute;
+		bottom: 6px;
+		right: 6px;
+		padding: 5px;
+		width: auto;
+		border-radius: 4px;
+
+		.text {
+				display: none;
+			}
+		.icon {
+			font-size: 32px;
+			font-size: 3.2rem;
+			display: block;
+		}
+	}
+
+	.title,
+	.price {
+		text-align: left;
+	}
+
+	&:hover, &:active, &:focus {
+		.expand {
+			margin-top: 0;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+
+	.toggle-mode .component.infobox, .component.infobox {
+		.img-wrapper {
+			float: left;
+			height: auto;
+			width: 43.5%;
+		}
+
+		.wrapper-info {
+			position: absolute;
+			right: 0;
+			margin-left: 16px;
+			height: 100%;
+			width: 43.5%;
+
+			&:hover, &:active, &:focus {
+				.expand {
+					margin-top: 0;
+				}
+			}
+		}
+
+		.bttn {
+			display: block;
+			position: absolute;
+			bottom: 6px;
+			right: 6px;
+			padding: 5px;
+			width: auto;
+			border-radius: 4px;
+
+			.text {
+					display: none;
+				}
+			.icon {
+				font-size: 32px;
+				font-size: 3.2rem;
+				display: block;
+			}
+		}
+
+		.title,
+		.price {
+			text-align: left;
+		}
+
+		&:hover, &:active, &:focus {
+			.expand {
+				margin-top: 0;
+			}
+		}
+	}
+}

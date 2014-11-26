@@ -1,4 +1,25 @@
 (function () {
+	'use strict';
+	var $document = $(document);
+
+	$document.on('click', '.filters, .closeFilters', function (ev) {
+		var targetEl = $(this).data('target-element');
+
+		if ($(targetEl)) {
+			if ($(targetEl).hasClass('active')) {
+				$(targetEl).slideUp(400, function () {
+					$(this).toggleClass('active');
+				});
+			} else {
+				$(targetEl).slideDown(500, function () {
+					$(this).toggleClass('active');
+				});
+			}
+		}
+		ev.preventDefault();
+	});
+}());
+(function () {
   'use strict';
 
   var isTouch = $('html').hasClass('touch')
@@ -9,7 +30,7 @@
 
     var isDesktopEv = $(ev.currentTarget).hasClass('top-level-item');
 
-    if ($(window).innerWidth() < 1024 && isDesktopEv && isResponsive) {
+    if ($(window).innerWidth() < 1023 && isDesktopEv && isResponsive) {
       return true;
     } else {
 
@@ -20,7 +41,7 @@
             if ($(ev.target).closest('.megamenu-list').length === 0) {
               $menu.find('.top-level-item').removeClass('active');
               $menu.find('.mega-drop').hide();
-              console.log(ev);
+              //console.log(ev);
             }
           };
 
@@ -81,8 +102,7 @@
       var $menu = $('.megamenu-list');
       $menu.parent().find('.nav-btn').removeClass('open');
 
-
-      if ($(this).innerWidth() > 1024) {
+      if ($(this).innerWidth() > 1023) {
         $menu.show();
       }
       else {
@@ -106,6 +126,11 @@
 					searchWidth = searchBoxWidth;
 				}
 				return searchWidth;
+			},
+			closeSearch = function () {
+				searchBox.stop().animate({width: 0},{queue: false, duration: 400, complete: function() {
+					searchBox.parent().toggleClass('search-on');
+				}});
 			};
 
 	$document.on('click', '.show-search', function (ev) {
@@ -114,11 +139,13 @@
 		if ($this.parent().hasClass('search-on')) {
 			searchBox.stop().animate({width: 0},{queue: false, duration: 400, complete: function() {
 				$this.parent().toggleClass('search-on');
+				$('.off-area').off('click', closeSearch);
 			}});
 		} else {
 			$this.parent().toggleClass('search-on');
 			searchBox.stop().animate({width: getWidth()},{queue: false, duration: 500, complete: function() {
 				$(searchBox).focus();
+				$('.off-area').one('click', closeSearch);
 			}});
 		}
 		ev.preventDefault();
@@ -129,5 +156,4 @@
 			searchBox.css('width', '0').parent().removeClass('search-on');
 		}
 	});
-
 }());

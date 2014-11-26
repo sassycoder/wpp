@@ -156,23 +156,72 @@
 			<div class="pane base12 component-header">
 
 				<!-- START: COMPONENT DETAILS -->
-				<h2>Component: Modal</h2>
+				<h2>Component: Filters</h2>
 
-				<p><strong>Description:</strong> Modal dialogs for login/sign up/forgotten password.</p>
+				<p><strong>Description:</strong> Filter elements.</p>
 				<!-- END: COMPONENT DETAILS -->
 
 			</div><!-- .pane -->
 		</div>
 
     <div class="row">
-    	<div class="pane base6">
-    		<br>
-    		<p>
-    			<a href="#" class="register-link menu-item menu-item-type-custom menu-item-object-custom menu-item-9">Sign up</a>
-    			<br><br>
-    			<a href="#" class="login-link">Log in</a>
-  			</p>
-
+    	<div class="pane base12">
+        <span class="base-desc">.base12</span>
+        <div class="component filters cf">
+        	<div class="row">
+        		<div class="pane base4">
+        			<a href="#" class="bttn secondary filters" data-target-element=".facets">Filters (2)</a>
+        			<a href="#" class="toggle bttn secondary start">Name</a>
+        			<a href="#" class="toggle bttn secondary end active">Price</a>
+        		</div>
+        		<div class="pane base8">
+        			<div class="view-toggles">
+        				<a href="#" class="toggle bttn secondary start view-grid active">&nbsp;</a>
+        				<a href="#" class="toggle bttn secondary end view-list">&nbsp;</a>
+        			</div>
+        		</div>
+        	</div>
+        	<div class="facets active cf">
+        		<div class="row">
+        			<div class="pane base6">
+        				<div class="panel type cf">
+        					<h3>Type</h3>
+        						<a href="#" class="toggle bttn secondary start">All</a>
+        						<a href="#" class="toggle bttn secondary">Lifestyle</a>
+        						<a href="#" class="toggle bttn secondary end active">Products</a>
+        				</div>
+        				<div class="panel price cf">
+        					<h3>Price</h3>
+        					<div id="rangeSlider"></div>
+        					<input type="hidden" id="rangeSliderFrom" name="rangeSliderFrom" value="" />
+        					<input type="hidden" id="rangeSliderTo" name="rangeSliderTo" value="" />
+        				</div>
+        			</div>
+        			<div class="pane base6">
+        				<div class="panel themes cf">
+        					<div class="row">
+        						<h3>Themes</h3>
+        						<a href="#" class="bttn theme">For Her</a>
+        						<a href="#" class="bttn theme">For Him</a>
+        						<a href="#" class="bttn theme">For Kids</a>
+        						<a href="#" class="bttn theme">Kitchen</a>
+        						<a href="#" class="bttn theme">Sweets</a>
+        						<a href="#" class="bttn theme">For Mother</a>
+        						<a href="#" class="bttn theme active">Frozen</a>
+        						<a href="#" class="bttn theme">Glassware</a>
+        						<a href="#" class="bttn theme">Luxury</a>
+        						<a href="#" class="bttn theme">Novelty</a>
+        						<a href="#" class="bttn theme">Outside Gifts</a>
+        					</div>
+        						<div class="row">
+        							<a href="#" class="bttn reset">Reset Filters</a>
+        						</div>
+        				</div>
+        			</div>
+        		</div>
+        		<button class="close closeFilters" type="button" data-target-element=".facets">×</button>
+        	</div>
+        </div>
     	</div>
     </div>
 
@@ -204,95 +253,23 @@
 		<script type="text/javascript" src="assets/js/lib.min.js"></script>
 		<script type="text/javascript" src="assets/js/framework.min.js"></script>
 		<script type="text/javascript" src="assets/js/components.min.js"></script>
+		<script type="text/javascript">
+      var rangeFrom = $('#rangeSliderFrom'),
+          rangeTo = $('#rangeSliderTo');
 
-		<div id="alimir_bootmodal" class="modal fade" tabindex="-1" data-width="370" data-backdrop="static" data-keyboard="false" style="display: none;">
-		<div class="tab-content">
-		<div class="tab-pane active fade in" id="login_tab">		
-		<form id="login" action="login" method="post">
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal">&#215;</button>
-    <h3>Log-in</h3>
-  </div>
-  <div class="modal-body">
-    <div class="status"></div>
-    <div class="row-fluid control-group">
-      <label>        <input type="text" name="username" id="username" class="span12" value="" placeholder="Email Address"/></label>
-        <label>          <input type="password" name="password" id="password" class="span12" value="" placeholder="Password"/></label>
-
-            <label class="checkbox pull-left">
-              <input name="rememberme" type="checkbox" id="rememberme" value="forever">Remember Me            </label>
-            <span class="forgot-pass pull-right"><a href="#lostpass_tab" data-toggle="tab">Forgot Password?</a></span>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="submit" name="submit" id="wp-submit" class="btn btn-primary btn-large btn-block" data-loading-text="loading...">LOG-IN</button>
-                      <span class="register-link"><a href="#register_tab" data-toggle="tab">Not Registered? Sign up for an account.</a></span>
-                  </div>
-        <input type="hidden" id="security" name="security" value="41ad8e9bc8" /><input type="hidden" name="_wp_http_referer" value="/" />      </form>		</div>
-				<div class="tab-pane fade in" id="register_tab">		
-		<form action="register" id="regform" method="post" name="regform">
-    <div class="modal-header">
-        <button class="close" data-dismiss="modal" type=
-        "button">&#215;</button>
-
-        <h3>Sign Up</h3>
-    </div>
-
-    <div class="modal-body">
-        <span>Complete the fields below. You will recieve a confirmation
-        email once your account is activated.</span>
-
-        <div class="status"></div>
-
-        <div class="row-fluid control-group">
-            <label>
-              <input class="span12" id="first_name" name="first_name" placeholder="First Name" type="text" value="">
-            </label>
-            <label>
-              <input class="span12" id="surname" name="surname" placeholder="Surname" type="text" value="">
-            </label>
-            <label>
-              <input class="span12" id="publication" name="publication" placeholder="Publication" type="text" value="">
-            </label>
-            <label>
-              <input class="span12" id="job_title" name="job_title" placeholder="Job Title" type="text" value="">
-            </label>
-            <label>
-              <input class="span12" id="user_login" name="user_login" placeholder="Email Address" type="text" value="">
-            </label>
-            <label>
-            <input class="span12"  id="user_pass" name="user_pass" placeholder="Your Password" type="password" value="">
-          </label>
-        </div>
-    </div>
-
-    <div class="modal-footer">
-        <button class=
-        "btn btn-primary btn-large btn-block"
-        data-loading-text="loading..." id=
-        "pass-submit" name="pass-sumbit" type=
-        "submit">SIGN UP</button> <input name=
-        "register" type="hidden" value="true">
-    </div><input type="hidden" id="security2" name="security2" value="2e5763299f" /><input type="hidden" name="_wp_http_referer" value="/" /></form>		</div>
-				<div class="tab-pane fade in" id="lostpass_tab">		
-		<form id="passform" action="lostpassword" method="post">
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal">&#215;</button>
-    <h3>Reset Password</h3>
-  </div> 
-  <div class="modal-body">
-  <p class="alert" data-alert="alert">Enter the email address associated with your account</p>
-  	<div class="status"></div>
-    <div class="row-fluid control-group">
-		<label>        <input type="text" name="lost_pass" id="lost_pass" class="span12" value="" placeholder="Username or Email"/></label>
-    </div>
-  </div>
-  <div class="modal-footer">
-        <button type="submit" name="user-sumbit" id="user-submit" class="btn btn-primary btn-large btn-block" data-loading-text="loading...">SEND RESET LINK</button>
-		<input type="hidden" name="forgotten" value="true" />
-  </div>
-   <input type="hidden" id="security3" name="security3" value="2e5763299f" /><input type="hidden" name="_wp_http_referer" value="/" /></form>		</div>
-		</div>
-		</div>
+      $("#rangeSlider").ionRangeSlider({
+        type: "double",
+        min: 0,
+        max: 100,
+        from: 12,
+        to: 32,
+        hide_min_max: true,
+        prefix: '£',
+        onFinish: function (data) {
+            $(rangeFrom).val(data.from);
+            $(rangeTo).val(data.to);
+        }
+    });
+    </script>
 	</body>
 </html>

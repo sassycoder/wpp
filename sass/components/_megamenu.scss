@@ -116,6 +116,7 @@
 
     ul {
         li {
+          padding-left: 10px;
             a {
                 display: block;
                 padding: 8px 0 8px 16px;
@@ -125,12 +126,14 @@
                 font-size: 1.4rem;
                 line-height: 26px;
                 line-height: 2.6rem;
+                position: relative;
                 @extend .arrow_carrot-right;
 
                 &:before {
                     font-size: 14px;
                     padding: 5px 3px 0 0;
-                    float: left;
+                    position: absolute;
+                    left: 0;
                 }
 
                 &:hover, &:focus, &:active {
