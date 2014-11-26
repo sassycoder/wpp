@@ -9,7 +9,7 @@
 
     var isDesktopEv = $(ev.currentTarget).hasClass('top-level-item');
 
-    if ($(window).innerWidth() < 767 && isDesktopEv && isResponsive) {
+    if ($(window).innerWidth() < 1024 && isDesktopEv && isResponsive) {
       return true;
     } else {
 
@@ -82,7 +82,7 @@
       $menu.parent().find('.nav-btn').removeClass('open');
 
 
-      if ($(this).innerWidth() > 1008) {
+      if ($(this).innerWidth() > 1024) {
         $menu.show();
       }
       else {
