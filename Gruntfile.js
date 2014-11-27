@@ -23,8 +23,8 @@ module.exports = function (grunt) {
       },
 
       bake: {
-        files: [ "templates/**/*.html" ],
-        tasks: "bake:build"
+        files: ['templates/**/*.html'],
+        tasks: 'bake:build'
       }
     },
 
@@ -70,13 +70,13 @@ module.exports = function (grunt) {
     bake: {
       build: {
         files: {
-            "index.html": "templates/structure/index.html",
-            "layout1.html": "templates/layout/layout1.html",
-            "layout2.html": "templates/layout/layout2.html",
-            "modal.html": "templates/components/modal.html",
-            "infobox.html": "templates/components/infobox.html",
-            "filters.html": "templates/components/filters.html",
-            "style-guide.html": "templates/structure/style-guide.html"
+            'index.html': 'templates/structure/index.html',
+            'layout1.html': 'templates/layout/layout1.html',
+            'layout2.html': 'templates/layout/layout2.html',
+            'modal.html': 'templates/components/modal.html',
+            'infobox.html': 'templates/components/infobox.html',
+            'filters.html': 'templates/components/filters.html',
+            'style-guide.html': 'templates/structure/style-guide.html'
         }
       }
     },
@@ -106,6 +106,6 @@ module.exports = function (grunt) {
     }
   });
 
-  grunt.registerTask('build', ['compass:clean', 'compass:dist', 'concat', 'uglify', 'bake:build', 'replace']);
+  grunt.registerTask('build', ['compass:clean', 'compass:dist', 'jshint', 'concat', 'uglify', 'bake:build', 'replace']);
   grunt.registerTask('default', ['build']);
 };

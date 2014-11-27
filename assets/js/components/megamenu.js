@@ -81,7 +81,6 @@
       var $menu = $('.megamenu-list');
       $menu.parent().find('.nav-btn').removeClass('open');
 
-
       if ($(this).innerWidth() > 1023) {
         $menu.show();
       }

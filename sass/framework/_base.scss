@@ -405,45 +405,44 @@ header {
 }
 
 footer {
-    width: 100%;
-    padding: 23px 0 0 0;
-    background-color: #86dade;
-    overflow: hidden;
-    box-sizing: border-box;
+  width: 100%;
+  padding: 23px 0 0 0;
+  background-color: #86dade;
+  overflow: hidden;
+  box-sizing: border-box;
+  color: #ffffff;
+  
+  p {
+    float: left;
+  }
+
+  a {
+    line-height: 16px;
+    line-height: 1.6rem;
+    font-size: 14px;
+    font-size: 1.4rem;
     color: #ffffff;
-    
-    p {
-      float: left;
+
+    &:hover, &:active, &:focus {
+      text-decoration: underline;
     }
+  } 
 
-    a {
-      line-height: 16px;
-      line-height: 1.6rem;
-      font-size: 14px;
-      font-size: 1.4rem;
-      color: #ffffff;
+  .social-icon {    
+    float: left;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 5px 5px 3px;
+    margin-top: -6px;
+    margin-left: 8px;
+    color: #86dade;
+    font-size: 16px;     
 
-      &:hover, &:active, &:focus {
-        text-decoration: underline;
-      }
-    } 
-
-    .social-icon {    
-      float: left;
-      background-color: #fff;
-      border-radius: 20px;
-      padding: 5px 5px 3px;
-      margin-top: -6px;
-      margin-left: 8px;
-      color: #86dade;
-      font-size: 16px;     
-
-      &:hover, &:active, &:focus {
-        background-color: #000;
-        text-decoration: none;
-      }
+    &:hover, &:active, &:focus {
+      background-color: #000;
+      text-decoration: none;
     }
-
+  }
 }
 
 @media all and (max-width: 1023px) {
@@ -496,3 +495,28 @@ footer {
   }
 }
 
+@media all and (max-width: 567px) {
+  .nav {
+    .search.search {
+      right: 55px;
+
+      &.search-on {
+
+        .global-search {
+          right: -55px;
+          max-width: 100vw;
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 320px) {
+  .nav {
+    .search {
+      right: 55px;
+    }
+  }
+}
