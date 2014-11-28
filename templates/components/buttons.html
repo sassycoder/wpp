@@ -26,16 +26,18 @@
 			<div class="pane base12 component-header">
 
 				<!-- START: COMPONENT DETAILS -->
-				<h2>Component: Filters</h2>
+				<h2>Component: Buttons</h2>
 
-				<p><strong>Description:</strong> Filter elements. The Price slider writes it's values to two hidden fields (#rangeSliderFrom and #rangeSliderTo)</p>
+				<p><strong>Description:</strong> Buttons</p>
 				<!-- END: COMPONENT DETAILS -->
 
 			</div><!-- .pane -->
 		</div>
 
     <div class="row">
-        <!--(bake /templates/components/_filters.html)-->
+        <div class="pane base12">
+            <!--(bake /templates/components/_buttons.html)-->
+        </div>
     </div>
 
 	</div><!-- .main -->
@@ -43,25 +45,6 @@
 </div><!-- .wrapper -->
 
 		<!--(bake /templates/structure/footer.html)-->
-
-		<script type="text/javascript">
-      var rangeFrom = $('#rangeSliderFrom'),
-          rangeTo = $('#rangeSliderTo');
-
-      $("#rangeSlider").ionRangeSlider({
-        type: "double",
-        min: 0,
-        max: 100,
-        from: 12,
-        to: 32,
-        hide_min_max: true,
-        prefix: '£',
-        onFinish: function (data) {
-            $(rangeFrom).val(data.from);
-            $(rangeTo).val(data.to);
-        }
-      });
-    </script>
 
 	</body>
 </html>

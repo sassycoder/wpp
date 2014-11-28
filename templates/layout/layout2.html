@@ -23,55 +23,60 @@
 		<div class="main">
 		    <a id="skipnav" tabindex="-1"></a>
 
-		    <article class="v1">
-				<div class="row">
+		        <div class="row">
 					<div class="pane base12">
-
-						<h2>Layout 1</h2>
-						
+						<h2>
+							Valentines Day
+							<span>Gifts for foodies</span>
+						</h2>
 					</div>
-				</div><!-- .row -->
-				
+				</div>
+
+		    <div class="row">
+		        <!--(bake /templates/components/_filters.html)-->
+		    </div>
+
+		    <article class="v1">
 				<div class="row">
 					<div class="pane base9 tp12 ml12">
 						<div class="img-wrapper hero"><img src="assets/img/structure/hero.jpg" alt=""></div>
 					</div>
 					
 					<div class="pane base3 tp6 tp-mgZero ml6 ml-mgZero">
-						<div class="img-wrapper"><img src="assets/img/structure/box1.jpg" alt=""></div>
+						<!--(bake /templates/components/_infobox.html)-->
 					</div>
 					<div class="pane base3 tp6 ml6">
-						<div class="img-wrapper"><img src="assets/img/structure/box2.jpg" alt=""></div>
+						<!--(bake /templates/components/_infobox.html)-->
 					</div>
 				</div><!-- .row -->
 
 				<div class="row">
 					<div class="pane base3 tp6 ml6">
-						<div class="img-wrapper"><img src="assets/img/structure/box1.jpg" alt=""></div>
+						<!--(bake /templates/components/_infobox.html)-->
 					</div>
 					<div class="pane base3 tp6 ml6">
-						<div class="img-wrapper"><img src="assets/img/structure/box2.jpg" alt=""></div>
+						<!--(bake /templates/components/_infobox.html)-->
 					</div>
 					<div class="pane base3 tp6 tp-mgZero ml6 ml-mgZero">
-						<div class="img-wrapper"><img src="assets/img/structure/box3.jpg" alt=""></div>
+						<!--(bake /templates/components/_infobox.html)-->
 					</div>
 					<div class="pane base3 tp6 ml6">
-						<div class="img-wrapper"><img src="assets/img/structure/box4.jpg" alt=""></div>
+						<!--(bake /templates/components/_infobox.html)-->
 					</div>
 				</div><!-- .row -->
 
 				<div class="row">
 					<div class="pane base3 tp6 ml6">
-						<div class="img-wrapper"><img src="assets/img/structure/box1.jpg" alt=""></div>
+						<!--(bake /templates/components/_infobox.html)-->
 					</div>
 					<div class="pane base3 tp6 ml6">
-						<div class="img-wrapper"><img src="assets/img/structure/box2.jpg" alt=""></div>
+						<!--(bake /templates/components/_infobox.html)-->
 					</div>
 					<div class="pane base3 tp6 tp-mgZero ml6 ml-mgZero">
-						<div class="img-wrapper"><img src="assets/img/structure/box3.jpg" alt=""></div>
+						<!--(bake /templates/components/_infobox.html)-->
 					</div>
 					<div class="pane base3 tp6 ml6">
-						<div class="img-wrapper"><img src="assets/img/structure/box4.jpg" alt=""></div>
+						<!--(bake /templates/components/_infobox.html)-->
 					</div>
 				</div><!-- .row -->
 			</article>
@@ -261,6 +266,25 @@
 </div><!-- .wrapper -->
 
 	<!--(bake /templates/structure/footer.html)-->
+
+			<script type="text/javascript">
+		      var rangeFrom = $('#rangeSliderFrom'),
+		          rangeTo = $('#rangeSliderTo');
+
+		      $("#rangeSlider").ionRangeSlider({
+		        type: "double",
+		        min: 0,
+		        max: 100,
+		        from: 12,
+		        to: 32,
+		        hide_min_max: true,
+		        prefix: '£',
+		        onFinish: function (data) {
+		            $(rangeFrom).val(data.from);
+		            $(rangeTo).val(data.to);
+		        }
+		      });
+		    </script>
 	
     </body>
 </html>

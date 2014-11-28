@@ -71,12 +71,15 @@ module.exports = function (grunt) {
       build: {
         files: {
             'index.html': 'templates/structure/index.html',
+            'style-guide.html': 'templates/structure/style-guide.html',
             'layout1.html': 'templates/layout/layout1.html',
             'layout2.html': 'templates/layout/layout2.html',
+            'lightbox.html': 'templates/layout/lightbox.html',
             'modal.html': 'templates/components/modal.html',
             'infobox.html': 'templates/components/infobox.html',
             'filters.html': 'templates/components/filters.html',
-            'style-guide.html': 'templates/structure/style-guide.html'
+            'buttons.html': 'templates/components/buttons.html',
+            'lightbox-item.html': 'templates/components/lightbox-item.html'
         }
       }
     },

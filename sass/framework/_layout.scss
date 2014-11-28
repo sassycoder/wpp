@@ -1478,7 +1478,6 @@
     width: 93.6%;
     margin: 0 3.2%;
   }
-  .rwd {
     .pane {
       float: none;
       width: 100%;
@@ -1584,7 +1583,7 @@
         display: none;
       }
     }
-    &.gutterless .pane {
+    .gutterless .pane {
       float: none;
       width: 100%;
       margin: 0;
@@ -1673,7 +1672,6 @@
         }
       }
     }
-  }
   .pane {
     &.mp12 {
       width: 100%;
@@ -1804,6 +1802,13 @@
   .row .pane {
     margin-left: 4%;
   }
+
+  .toggle-mode {
+    @for $i from 1 through 11 {
+      .pane.base#{$i}-#{$i + 1}.ml12 { width: 100%; margin-left:0; }
+    }
+  }
+
 }
 
 .left {

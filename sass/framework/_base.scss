@@ -120,10 +120,19 @@ h1 {
 }
 
 h2 {
-    font-size: 26px;
-    font-size: 2.6rem;
-    padding: 10px 0 10px;
-    margin: 0
+    font-size: 34px;
+    font-size: 3.4rem;
+    line-height: 41px;
+    line-height: 4.1rem;
+    padding: 16px 0;
+    margin: 0;
+    font-family: 'WaitroseHandscript'; 
+
+    span {
+      font-family: 'WaitroseRegular';  
+      font-size: 20px;
+      font-size: 2rem;
+    }
 }
 
 h3 {
@@ -131,7 +140,7 @@ h3 {
     font-size: 1.8rem;
     line-height: 21px;
     line-height: 2.1rem;
-    padding: 0 0 10px;
+    padding: 10px 0 0;
     margin: 0;
     font-family: 'WaitroseBold'; 
 }
@@ -163,6 +172,13 @@ ul li,ol li {
     list-style-type: none;
 }
 
+.body-large {
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 22px;
+  line-height: 2.2rem;
+}
+
 .bttn {
   padding: 0 12px;
   text-align: center;
@@ -177,7 +193,7 @@ ul li,ol li {
   display: block;
   cursor: pointer;
   //-webkit-appearance: button;
-  -webkit-border-radius: 0;
+  border-radius: 4px;
   outline: none;
   width: auto;
 
@@ -188,10 +204,14 @@ ul li,ol li {
 
   &.secondary {
     color: $btn_secondary_col;
+    font-family: "WaitroseRegular";
 
     &:hover, &:focus, &:active {
       background-color: $btn_primary_active;
       color: $btn_primary;
+    }
+    &.active {
+      font-family: "WaitroseBold";
     }
   }
 
@@ -235,15 +255,35 @@ ul li,ol li {
   &.reset {
     @extend .theme;
     float: right;
+    font-family: "WaitroseBold";
     background-color: #000;
     color: #fff;
     margin: 0;
     text-transform: uppercase;
   }
 
+  &.export-item {
+    background-color: #ccc;
+    font-family: "WaitroseRegular";
+    border-radius: 0;
+    border-bottom: 1px dotted #fff;
+
+    &:last-child {
+      border: none;
+    }
+  }
+
   &.view-grid, &.view-list {
     width: 44px;
-    text-indent: -9999px;
+    font-size: 32px;
+    font-size: 3.2rem;
+    padding: 5px 5px 0;
+  }
+
+  .icon:before {
+    float: left;
+    padding-top: 9px;
+    padding-right: 5px;
   }
 }
 
@@ -445,6 +485,10 @@ footer {
   }
 }
 
+.show-on-mobile {
+  display: none;
+}
+
 @media all and (max-width: 1023px) {
 
     .header-actions {
@@ -510,6 +554,12 @@ footer {
         }
       }
     }
+  }
+}
+
+@media all and (max-width: 480px) {
+  .show-on-mobile {
+    display: block;
   }
 }
 

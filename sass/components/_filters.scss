@@ -1,4 +1,6 @@
 .component.filters {
+	width: 100%;
+	margin: 0 0 16px 0;
 	.bttn {
 		border: 1px solid $btn_primary;
 
@@ -32,6 +34,10 @@
 		float: right;
 	}
 
+	.top-btns {
+		.toggle { float: right; }
+	}
+
 	.facets {
 		float: left;
 		width: 100%;
@@ -41,11 +47,41 @@
 
 		h3 {
 			color: #fff;
+			border-top: 1px solid #fff;
+			padding: 0;
+			&:first-child {
+				border-top: none;
+			}
+
+			a {
+				color: #fff;
+				display: block;
+				padding: 16px 16px 0;
+				text-decoration: none;
+				cursor: default;
+
+				&.active span {
+					@extend .arrow_triangle-up;
+				}
+			}
+
+			span {
+				@extend .arrow_triangle-down;
+				&:before {
+					position: absolute;
+					right: -18px;
+					top: 2px;
+					color: #fff;
+				}
+			}
 		}
 
 		.bttn {
 			border-color: #fff;
-			text-transform: none;
+
+			&.reset {
+				margin: 0 16px 16px;
+			}
 
 			&:active, &:focus, &:hover, &.active {
 				color: $btn_primary_col;
@@ -54,18 +90,20 @@
 
 		.panel {
 			padding: 16px;
-			border-top: 1px solid #fff;
-			&:first-child {
-				border-top: none;
+
+			&.type {
+				.secondary { 
+					text-transform: none;
+				}
 			}
 
 			&.price {
-				h3 { padding-bottom: 0; }
+				h3 a { padding-bottom: 0; }
 			}
 			&.themes {
 				padding-left: 0;
 
-				h3 { padding-bottom: 0; }
+				h3 a { padding-bottom: 0; }
 			}
 		}
 
@@ -105,6 +143,111 @@
 
 	.irs-hidden-input {
 		display: none;
+	}
+}
+
+// @media all and(max-width: 767px) {
+// 	.component.filters {
+// 		.facets .panel {
+// 			padding: 16px 4px;
+// 		}
+// 	}
+// }
+
+@media all and(max-width: 767px) {
+	.component.filters {
+		margin: 0 0 4% 0;
+		.pane { margin-bottom: 0!important; }
+
+		.top-btns {
+			.bttn {
+				width: 50%;
+				&.filters {
+					width: 100%;
+					margin: 0;
+					padding: 5px 10px;
+					margin-top: 16px;
+					color: #000;
+					border-radius: 4px 4px 0 0;
+				}
+			}
+		}
+
+		.facets {
+			background-image: none;
+			background-color: #fff;
+
+			h3 {
+				border: none;
+				padding: 0;
+				text-align: center;
+				font-family: WaitroseRegular;
+				font-size: 16px;
+				font-size: 1.6rem;
+				text-transform: uppercase;
+				color: #000;
+				background: $btn_primary;
+
+				a {
+					padding: 14px 10px;
+					color: #000;
+
+					&.active {
+						background: #c5eced;
+					}
+
+					span {
+						position: relative;
+						text-indent: 0;
+					}
+				}
+				
+			}
+			.bttn {
+				border-color: $btn_primary;
+				&.reset {
+					margin: 0;
+					padding: 14px 10px;
+					background: $btn_primary;
+					color: #000;
+					width: 100%;
+					border-radius: 0 0 4px 4px;
+					font-family: WaitroseRegular;
+				}
+				&.active {
+					border-color: $btn_primary;
+				}
+			}
+			.pane {
+				margin-left: 0; 
+
+			}
+			.panel {
+				display: none;
+				background: #fff;
+				&.type, &.themes {
+					text-align: center;
+					.bttn {
+						float: none;
+						display: inline-block;
+					}
+				}
+				&.themes {
+					padding: 16px 10px;
+				}
+			}
+		}
+
+		.irs-line {
+			border-color: $btn_primary;
+			background: transparentize($btn_primary, 0.5);
+		}
+		.irs-bar {
+			border-color: $btn_primary;
+			background: $btn_primary;
+		}
+
+		.close, .view-toggles {display: none;}
 	}
 
 }

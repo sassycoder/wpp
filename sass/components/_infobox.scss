@@ -21,7 +21,6 @@
 
 	.bttn {
 		display: none;
-		width: 92px;
 		margin: 10px auto 0;
 
 		.icon {
@@ -82,6 +81,9 @@
 			font-size: 32px;
 			font-size: 3.2rem;
 			display: block;
+			&:before {
+				padding:0;
+			}
 		}
 	}
 
