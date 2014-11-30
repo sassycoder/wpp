@@ -8,6 +8,7 @@
 // }
 
 //for variable width panes e.g. switching different view modes
+.grid-gutter { width: 16px;}
 @for $i from 1 through 11 {
   .pane.base#{$i}-#{$i + 1} { @extend .base#{$i}; }
 }
@@ -26,11 +27,17 @@
 
 }
 
+@media (max-width: 1023px) {
+  .grid-gutter { width: 20px;}
+}
+
 @media (max-width: 767px) {
+  .grid-gutter { width: 4%;}
   .toggle-mode {
     @for $i from 1 through 11 {
       .pane.base#{$i}-#{$i + 1}.ml12 { width: 100%; margin-left:0; }
     }
+
   }
 }
 
@@ -726,7 +733,7 @@
     width: 93.6%;
     margin: 0 3.2%;
   }
-    .pane {
+    .pane, .toggle-mode .row .pane {
       &.ml12 {
         width: 100%;
         float: left;
@@ -1478,7 +1485,7 @@
     width: 93.6%;
     margin: 0 3.2%;
   }
-    .pane {
+    .pane, .toggle-mode .row .pane {
       float: none;
       width: 100%;
       margin: 0;
@@ -1799,7 +1806,7 @@
     width: 93.6%;
     margin: 0 3.2%;
   }
-  .row .pane {
+  .pane {
     margin-left: 4%;
   }
 

@@ -1,4 +1,12 @@
 .wpp {
+	.v1, .v2, .v3, .v4 {
+		&.row {
+			.pane {
+				margin: 0;
+				margin-bottom: 20px;
+			}
+		}
+	}
 	.row {
 		padding: 0;
 
@@ -107,7 +115,7 @@
 			height: 172px;
 
 			&.hero {
-				height: 364px;
+				height: 494px;
 			}
 			&.box-large {
 				height: 364px;

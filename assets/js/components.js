@@ -67,6 +67,8 @@
 			$('.view-grid, .view-list').toggleClass('active');
 			$body.toggleClass('toggle-mode');
 		}
+		// setTimeout(function(){}, 1000);
+		$('.v1, .v2, .v3, .v4').isotope();
 		ev.preventDefault();
 	});
 
