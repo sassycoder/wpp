@@ -34,12 +34,12 @@
 			$('.view-grid, .view-list').toggleClass('active');
 			$body.toggleClass('toggle-mode');
 		}
-		// setTimeout(function(){}, 1000);
-		$('.v1, .v2, .v3, .v4').isotope();
+		$('.v1, .v2, .v3, .v4').isotope('updateSortData').isotope();
 		ev.preventDefault();
 	});
 
-	$document.on('click', '.filters, .closeFilters', function (ev) {
+	$document.on('click', '.bttn.filters, .closeFilters', function (ev) {
+		$('.bttn.filters').toggleClass('active');
 		var targetEl = $(this).data('target-element');
 
 		if ($(targetEl)) {

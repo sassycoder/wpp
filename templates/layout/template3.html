@@ -21,60 +21,42 @@
 	<!--(bake /templates/structure/header.html)-->
 
 		<div class="main">
-		    <a id="skipnav" tabindex="-1"></a>
+	    <a id="skipnav" tabindex="-1"></a>
 
-		        <div class="row">
-					<div class="pane base12">
-						<h2>
-							Valentines Day
-							<span>Gifts for foodies</span>
-						</h2>
-					</div>
+      <div class="row">
+				<div class="pane base12">
+					<h2>
+						Valentines Day
+						<span>Gifts for foodies</span>
+					</h2>
 				</div>
-
-		    <div class="row">
-		        <!--(bake /templates/components/_filters.html)-->
-		    </div>
-
-		    <div class="row">
-			    <article class="v3">
-				<div class="row">
-					<div class="pane base12">
-
-						<h2>Layout 3</h2>
-						
-					</div>
-				</div><!-- .row -->
-				
-				<div class="row">
-					<div class="pane base9 tp12 ml12">
-						<div class="img-wrapper hero"><img src="assets/img/structure/hero.jpg" alt=""></div>
-					</div>
-					
-					<div class="pane base3 tp6 tp-mgZero ml6 ml-mgZero">
-						<div class="img-wrapper"><img src="assets/img/structure/box1.jpg" alt=""></div>
-					</div>
-					<div class="pane base3 tp6 ml6">
-						<div class="img-wrapper"><img src="assets/img/structure/box2.jpg" alt=""></div>
-					</div>
-				</div><!-- .row -->
-
-				<div class="row">
-					<div class="pane base3 tp12 ml12">
-						<div class="pane base3 tp6 ml6">
-							<div class="img-wrapper"><img src="assets/img/structure/box3.jpg" alt=""></div>
-						</div>
-						<div class="pane base3 tp6 dw-mgZero ml6">
-							<div class="img-wrapper"><img src="assets/img/structure/box4.jpg" alt=""></div>
-						</div>
-					</div>
-					<div class="pane base9 tp12 ml12 tp-mgZero ml-mgZero">
-						<div class="img-wrapper hero"><img src="assets/img/structure/hero2.jpg" alt=""></div>
-					</div>
-				</div><!-- .row -->
-			</article> <!-- end article 3 -->
-
 			</div>
+
+	    <div class="row">
+	        <!--(bake /templates/components/_filters.html)-->
+	    </div>
+
+	    <div class="row v3">
+				<div class="pane base9-4 tp12 ml6 mp12" data-order="1">
+					<!--(bake /templates/components/_infobox-hero.html)-->
+				</div>
+				<div class="pane base3-4 grid-sizer tp-mgZero ml6 ml-mgZero mp12" data-order="2">
+					<!--(bake /templates/components/_infobox.html)-->
+				</div>
+				<div class="pane base3-4 grid-sizer tp-mgZero ml6 ml-mgZero mp12" data-order="3">
+					<!--(bake /templates/components/_infobox.html)-->
+				</div>
+				<div class="pane base9-4 tp12 ml6 mp12" data-order="5,6">
+					<!--(bake /templates/components/_infobox-hero.html)-->
+				</div>
+				<div class="pane base3-4 grid-sizer tp-mgZero ml6 ml-mgZero mp12" data-order="4">
+					<!--(bake /templates/components/_infobox.html)-->
+				</div>
+				<div class="pane base3-4 grid-sizer tp-mgZero ml6 ml-mgZero mp12" data-order="6,5">
+					<!--(bake /templates/components/_infobox.html)-->
+				</div>
+				<div class="grid-gutter"></div>
+			</div><!-- .row -->
 		</div><!-- .main -->
 	<div class="push"></div> <!-- For sticky footer -->
 </div><!-- .wrapper -->
@@ -82,6 +64,9 @@
 	<!--(bake /templates/structure/footer.html)-->
 
 			<script type="text/javascript">
+			(function () {
+				'use strict';
+
 		      var rangeFrom = $('#rangeSliderFrom'),
 		          rangeTo = $('#rangeSliderTo');
 
@@ -99,20 +84,9 @@
 		        }
 		      });
 
-		    var $container1 = $('.v1');
-		    		$container2 = $('.v2');
+		    var $container3 = $('.v3');
 				// init
-				$container1.isotope({
-				  // options
-				  itemSelector: '.pane',
-				  layoutMode: 'masonry',
-				  masonry: {
-				  	columnWidth: '.grid-sizer',
-					  gutter: '.grid-gutter'
-					}
-				});
-
-				$container2.isotope({
+				$container3.isotope({
 				  // options
 				  itemSelector: '.pane',
 				  layoutMode: 'masonry',
@@ -121,11 +95,27 @@
 					  gutter: '.grid-gutter'
 					},
 					getSortData: {
-				    order: '[data-order]'
+				    order: function (item) {
+				    	var screenWidth = $(window).innerWidth(),
+				    		order = new Array(),
+				    		orderData = $(item).data('order');
+				    		order = JSON.parse("[" + orderData + "]");
+
+				    	if (screenWidth > 1023) {
+				    		return order[0];
+				    	} else if (screenWidth < 1023 && screenWidth > 767) {
+				    		return order[1] === undefined ? order[0] : order[1];
+				    	} else return order[2] === undefined ? order[1] : order[2];
+				    }
 				  },
-				  // sort by color then number
+				  // sort by data-order
 				  sortBy: 'order'
 				});
+
+				$(window).resize(function() {  
+				    $container3.isotope('updateSortData').isotope();
+				});
+			}());
 		    </script>
 	
     </body>

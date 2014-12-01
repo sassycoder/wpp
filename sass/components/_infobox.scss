@@ -4,6 +4,26 @@
 	border: 1px solid #d6d6d6;
 	transition: all .2s ease-out;
 
+	&.hero {
+		.img-wrapper {
+			height: 556px;
+		}
+	}
+
+	&.large {
+		.img-wrapper {
+			height: 556px;
+		}
+	}
+
+	&.hero, &.large {
+		.wrapper-info {
+			display: none;
+			bottom: 0;
+			position: absolute;
+		}
+	}
+
 	.img-wrapper {
 		border: none;
 	}
@@ -22,6 +42,11 @@
 	.bttn {
 		display: none;
 		margin: 10px auto 0;
+		background-color: $btn_primary_active;
+
+		&:hover, &:active, &:focus {
+			background-color: $btn_primary_hover;
+		}
 
 		.icon {
 			line-height: 16px;
@@ -37,13 +62,21 @@
 		text-align: center;
 	}
 
+	.title {
+		font-family: 'Waitrosebold';
+	}
+
 	&:hover, &:active, &:focus {
 		box-shadow: 0px 6px 12px 0px rgba(50,50,50,0.55);
-		.expand {
-			margin-top: -46px;
+		.wrapper-info {
+			display: block;
+			.expand {
+				margin-top: -46px;
+				text-align: center;
 
-			.bttn {
-				display: block;
+				.bttn {
+					display: inline-block;
+				}
 			}
 		}
 	}
@@ -51,6 +84,11 @@
 
 //toggle-mode layout
 .toggle-mode .component.infobox {
+	&.hero, &.large {
+		.img-wrapper {
+			height: auto;
+		}
+	}
 	.img-wrapper {
 		float: left;
 		height: auto;
@@ -62,6 +100,7 @@
 		right: 0;
 		margin-left: 16px;
 		height: 100%;
+		display: block;
 		@extend .pane.base2;
 	}
 
@@ -75,8 +114,8 @@
 		border-radius: 4px;
 
 		.text {
-				display: none;
-			}
+			display: none;
+		}
 		.icon {
 			font-size: 32px;
 			font-size: 3.2rem;
@@ -93,8 +132,18 @@
 	}
 
 	&:hover, &:active, &:focus {
-		.expand {
+		.wrapper-info .expand {
 			margin-top: 0;
+		}
+	}
+}
+
+@media (max-width: 1023px) {
+	.component.infobox {
+		&.hero, &.large {
+			.img-wrapper {
+				height: 536px;
+			}
 		}
 	}
 }
@@ -102,6 +151,16 @@
 @media (max-width: 767px) {
 
 	.toggle-mode .component.infobox, .component.infobox {
+
+		&.hero, &.large {
+			.img-wrapper {
+				height: auto;
+			}
+			.wrapper-info {
+				display: block;
+			}
+		}
+
 		.img-wrapper {
 			float: left;
 			height: auto;
@@ -114,12 +173,6 @@
 			margin-left: 16px;
 			height: 100%;
 			width: 43.5%;
-
-			&:hover, &:active, &:focus {
-				.expand {
-					margin-top: 0;
-				}
-			}
 		}
 
 		.bttn {
@@ -138,6 +191,10 @@
 				font-size: 32px;
 				font-size: 3.2rem;
 				display: block;
+
+				&:before {
+					padding-top: 0;
+				}
 			}
 		}
 
@@ -147,7 +204,7 @@
 		}
 
 		&:hover, &:active, &:focus {
-			.expand {
+			.wrapper-info .expand {
 				margin-top: 0;
 			}
 		}

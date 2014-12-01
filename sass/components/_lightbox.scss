@@ -78,6 +78,12 @@
 		float: left;
 		margin-left: 16px;
 
+		.title, .price {
+			font-size: 16px;
+			font-size: 1.6rem;
+			line-height: 17px;
+			line-height: 1.7rem;
+		}
 		.title {
 			font-family: 'WaitroseLogofont';
 		}

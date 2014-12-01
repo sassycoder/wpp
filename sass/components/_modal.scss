@@ -216,10 +216,11 @@ Copyright (c) 2012 Dan Eden*/
 
 .modal {
   background-color: #86dade;
+  padding: 18px 8px;
 }
 
 .modal a {
-  color: #fff;
+  color: #000;
 }
 
 .modal .row-fluid [class*=span] {
@@ -232,7 +233,8 @@ Copyright (c) 2012 Dan Eden*/
 }
 
 .modal-header h3 {
-    margin: 0;
+    margin: 0 0 10px 0;
+    padding-top: 5px;
     font-family: 'WaitroseBold';
     font-size: 36px;
     font-size: 3.6rem;
@@ -240,6 +242,8 @@ Copyright (c) 2012 Dan Eden*/
     line-height: 4.3rem;
     color: #fff;
     text-align: center;
+    letter-spacing: .1rem;
+    letter-spacing: 1px;
 }
 
 .modal-body {
@@ -253,6 +257,10 @@ Copyright (c) 2012 Dan Eden*/
     border: none;
 }
 
+.modal-body .pull-left {
+  float: left;
+}
+
 .modal-body span {
     text-align: center;
     margin-bottom: 20px;
@@ -260,21 +268,24 @@ Copyright (c) 2012 Dan Eden*/
 
     &.forgot-pass {
       text-align: left;
+      float: right;
     }
 }
 
 .modal-footer {
-    padding: 14px 15px 15px;
+    padding: 0 15px 15px;
     background-color: transparent;
     border-top: none;
     box-shadow: none;
     text-align: left;
+    color: #000;
 
     .register-link {
-      margin-top: 15px;
+      margin-top: 8px;
+      padding: 0 20px;
       display: block;
-      font-size: 14px;
-      font-size: 1.4rem;
+      font-size: 12px;
+      font-size: 1.2rem;
     }
 }
 
@@ -306,6 +317,8 @@ Copyright (c) 2012 Dan Eden*/
   background-image: none;
   border: none;
   font-family: "WaitroseBold";
+  letter-spacing: 1px;
+  letter-spacing: .1rem;
 
   &:hover, &:focus, &:active {
     background-color: #fdb813;

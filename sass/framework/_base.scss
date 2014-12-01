@@ -2,11 +2,13 @@
 
 // Theme vars
 
-$btn_primary: #8adade;
+$btn_primary: #fff;
+$btn_primary_bg: #8adade;
 $btn_primary_hover: #fbb831;
-$btn_primary_active: #fff;
+$btn_primary_active: #8adade;
 $btn_primary_col: #000;
-$btn_secondary_col: #fff;
+$btn_secondary_bg: #fff;
+$btn_secondary_col: #8adade;
 
 
 * {
@@ -124,7 +126,7 @@ h2 {
     font-size: 3.4rem;
     line-height: 41px;
     line-height: 4.1rem;
-    padding: 16px 0;
+    padding: 20px 0 16px;
     margin: 0;
     font-family: 'WaitroseHandscript'; 
 
@@ -188,7 +190,7 @@ ul li,ol li {
   line-height: 3.6rem;
   font-family: 'WaitroseBold';
   border: none;
-  background-color: $btn_primary;
+  background-color: $btn_primary_bg;
   color: $btn_primary_col;
   display: block;
   cursor: pointer;
@@ -205,19 +207,21 @@ ul li,ol li {
   &.secondary {
     color: $btn_secondary_col;
     font-family: "WaitroseRegular";
+    background-color: $btn_secondary_bg;
 
     &:hover, &:focus, &:active {
       background-color: $btn_primary_active;
       color: $btn_primary;
     }
     &.active {
-      font-family: "WaitroseBold";
+      //font-family: "WaitroseBold";
     }
   }
 
   &.active {
     background-color: $btn_primary_active;
     color: $btn_primary;
+    cursor: default;
   }
 
   &.filters {
@@ -271,13 +275,24 @@ ul li,ol li {
     &:last-child {
       border: none;
     }
+
+    &:hover, &:focus, &:active {
+      color: #666;
+      background-color: #000;
+    }
   }
 
   &.view-grid, &.view-list {
-    width: 44px;
-    font-size: 32px;
-    font-size: 3.2rem;
-    padding: 5px 5px 0;
+    width: 40px;
+    height: 38px;
+    font-size: 29px;
+    font-size: 2.9rem;
+    padding: 0 5px 0;
+
+    &:before {
+      float: left;
+      margin-top: 3px;
+    }
   }
 
   .icon:before {
@@ -453,7 +468,7 @@ footer {
   color: #ffffff;
   
   p {
-    float: left;
+    display: inline-block;
   }
 
   a {
@@ -462,6 +477,7 @@ footer {
     font-size: 14px;
     font-size: 1.4rem;
     color: #ffffff;
+    display: inline-block;
 
     &:hover, &:active, &:focus {
       text-decoration: underline;
@@ -469,7 +485,7 @@ footer {
   } 
 
   .social-icon {    
-    float: left;
+    display: inline-block;
     background-color: #fff;
     border-radius: 20px;
     padding: 5px 5px 3px;
@@ -491,11 +507,16 @@ footer {
 
 @media all and (max-width: 1023px) {
 
+    .wrapper-header {
+      &.main { margin-bottom: 30px; } 
+    } 
+
     .header-actions {
       display: none;
     } 
 
     .nav .search {
+      display: none;
       position: absolute;
       right: 105px;
       top: 25px;
@@ -534,8 +555,22 @@ footer {
 }
 
 @media all and (max-width: 767px) {
-  .wrapper-header h1 {
-    width: 210px;
+  .wrapper-header {
+    h1 {
+      width: 260px;
+      font-size: 32px;
+      font-size: 3.2rem;
+      line-height: 32px;
+      line-height: 3.2rem;
+    }  
+  }
+
+  footer {
+    text-align: center;
+    
+    .follow {
+      display: none;
+    }
   }
 }
 
@@ -560,6 +595,14 @@ footer {
 @media all and (max-width: 480px) {
   .show-on-mobile {
     display: block;
+  }
+
+  h2 {
+    line-height: 31px;
+    line-height: 3.1rem;
+    span {
+      display: block;
+    }
   }
 }
 
