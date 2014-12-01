@@ -45,12 +45,12 @@
 	}
 
 	&.top {
-		border-bottom: 4px solid $btn_primary;
+		border-bottom: 4px solid $btn_primary_bg;
 		padding-bottom: 10px;
 	}
 
 	&.bottom {
-		border-top: 4px solid $btn_primary;
+		border-top: 4px solid $btn_primary_bg;
 		padding-top: 10px;
 	}
 }
