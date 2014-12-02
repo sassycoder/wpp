@@ -55,6 +55,10 @@
 		.text {
 			text-transform: uppercase;
 		}
+		.icon, .text {
+			display: inline;
+			margin: 0;
+		}
 	}
 
 	.title,
@@ -83,57 +87,75 @@
 }
 
 //toggle-mode layout
-.toggle-mode .component.infobox {
-	&.hero, &.large {
-		.img-wrapper {
-			height: auto;
+.toggle-mode {
+	.modal-body {
+		.pane {
+			width: 100%!important;
+			margin-left: 0!important;
 		}
 	}
-	.img-wrapper {
-		float: left;
-		height: auto;
-		@extend .pane.base2;
-	}
-
-	.wrapper-info {
-		position: absolute;
-		right: 0;
-		margin-left: 16px;
-		height: 100%;
-		display: block;
-		@extend .pane.base2;
-	}
-
-	.bttn {
-		display: block;
-		position: absolute;
-		bottom: 6px;
-		right: 6px;
-		padding: 5px;
-		width: auto;
-		border-radius: 4px;
-
-		.text {
-			display: none;
-		}
-		.icon {
-			font-size: 32px;
-			font-size: 3.2rem;
-			display: block;
-			&:before {
-				padding:0;
+	.component.infobox {
+		&.hero, &.large {
+			.img-wrapper {
+				height: auto;
 			}
 		}
-	}
+		.img-wrapper {
+			float: left;
+			height: auto;
+			@extend .pane.base2;
+		}
 
-	.title,
-	.price {
-		text-align: left;
-	}
+		.wrapper-info {
+			position: absolute;
+			right: 0;
+			margin-left: 16px;
+			height: 100%;
+			display: block;
+			@extend .pane.base2;
+		}
 
-	&:hover, &:active, &:focus {
-		.wrapper-info .expand {
-			margin-top: 0;
+		.bttn {
+			display: block;
+			position: absolute;
+			bottom: 6px;
+			right: 6px;
+			padding: 5px;
+			width: auto;
+			border-radius: 4px;
+
+			&.wine {
+				right: 60px;
+			}
+
+			.text {
+				display: none;
+			}
+			.icon {
+				font-size: 32px;
+				font-size: 3.2rem;
+				display: block;
+				&:before {
+					padding:0;
+				}
+			}
+			.glyphicons {
+				display: block;
+				&:before {
+					padding: 8px 8px 8px 7px;
+				}
+			}
+		}
+
+		.title,
+		.price {
+			text-align: left;
+		}
+
+		&:hover, &:active, &:focus {
+			.wrapper-info .expand {
+				margin-top: 0;
+			}
 		}
 	}
 }

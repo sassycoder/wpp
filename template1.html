@@ -177,6 +177,7 @@
 		        				<a href="#" class="toggle bttn secondary start icon_grid-2x2 view-grid active">&nbsp;</a>
 		        				<a href="#" class="toggle bttn secondary end icon_grid-3x3 view-list">&nbsp;</a>
 		        			</div>
+		        			<div id="Stage" class="EDGE-845735 bird"></div>
 		        		</div>
 		        	</div>
 		        	<div class="facets cf">
@@ -446,6 +447,8 @@
 	<script type="text/javascript" src="assets/js/components.min.js"></script>
 
 			<script type="text/javascript">
+			(function () {
+				'use strict';
 		      var rangeFrom = $('#rangeSliderFrom'),
 		          rangeTo = $('#rangeSliderTo');
 
@@ -474,6 +477,26 @@
 					  gutter: '.grid-gutter'
 					}
 				});
+
+				$container1.imagesLoaded( function() {
+				  $container1.isotope('layout');
+				});
+
+				$(window).resize(function() {  
+			    $container1.isotope('updateSortData').isotope();
+			    $container1.isotope('layout');
+				});
+
+				   AdobeEdge.loadComposition('birds', 'EDGE-845735', {
+				    scaleToFit: "none",
+				    centerStage: "none",
+				    minW: "0",
+				    maxW: "undefined",
+				    width: "860px",
+				    height: "769px"
+				}, {dom: [ ]}, {dom: [ ]});
+
+			}());
 		    </script>
 	
     </body>

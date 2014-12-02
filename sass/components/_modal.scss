@@ -47,6 +47,18 @@
   margin-top: 0;
   top: 50%;
   overflow: visible; /* allow content to popup out (i.e tooltips) */
+
+  &.alternative {
+    background-color: #fff;
+    color: #000;
+
+    .modal-header h3 {
+      color: #000;
+    }
+    .modal-body {
+      color: #000;
+    }
+  }
 }
 
 .modal.fade {

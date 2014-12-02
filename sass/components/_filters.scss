@@ -1,4 +1,5 @@
 .component.filters {
+	position: relative;
 	width: 100%;
 	margin: 0;
 	.bttn {
@@ -33,6 +34,24 @@
 
 	.view-toggles {
 		float: right;
+	}
+	#Stage {
+		position: absolute!important;
+		right: 24%!important;
+		
+		
+
+		&.bird {
+			height: 655px!important;
+			width: 860px!important;
+			bottom: 240px!important;
+			zoom: 0.1;
+		}
+		&.rose {
+			bottom: 0!important;
+			zoom: 0.4;
+		}
+		
 	}
 
 	.top-btns {
@@ -167,6 +186,8 @@
 	.component.filters {
 		margin: 0 0 4% 0;
 		.pane { margin-bottom: 0!important; }
+
+		#Stage { display: none;}
 
 		.top-btns {
 			.bttn {

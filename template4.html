@@ -466,40 +466,45 @@
 		        }
 		      });
 
-		    var $container4 = $('.v4');
-				// init
-				$container4.isotope({
-				  // options
-				  itemSelector: '.pane',
-				  layoutMode: 'masonry',
-				  masonry: {
-				  	columnWidth: '.grid-sizer',
-					  gutter: '.grid-gutter'
-					},
-					getSortData: {
-				    order: function (item) {
-				    	var screenWidth = $(window).innerWidth(),
-				    		order = new Array(),
-				    		orderData = $(item).data('order');
-				    		order = JSON.parse("[" + orderData + "]");
+			    var $container4 = $('.v4');
+					// init
+					$container4.isotope({
+					  // options
+					  itemSelector: '.pane',
+					  layoutMode: 'masonry',
+					  masonry: {
+					  	columnWidth: '.grid-sizer',
+						  gutter: '.grid-gutter'
+						},
+						getSortData: {
+					    order: function (item) {
+					    	var screenWidth = $(window).innerWidth(),
+					    		order = new Array(),
+					    		orderData = $(item).data('order');
+					    		order = JSON.parse("[" + orderData + "]");
 
-				    	if (screenWidth > 1023) {
-				    		return order[0];
-				    	} else if (screenWidth < 1023 && screenWidth > 767) {
-				    		return order[1] === undefined ? order[0] : order[1];
-				    	} else return order[2] === undefined ? order[1] : order[2];
-				    }
-				  },
-				  // sort by data-order
-				  sortBy: 'order'
+					    	if (screenWidth > 1023) {
+					    		return order[0];
+					    	} else if (screenWidth < 1023 && screenWidth > 767) {
+					    		return order[1] === undefined ? order[0] : order[1];
+					    	} else return order[2] === undefined ? order[1] : order[2];
+					    }
+					  },
+					  // sort by data-order
+					  sortBy: 'order'
+					});
+
+				$container4.imagesLoaded( function() {
+				  $container4.isotope('layout');
 				});
 
-				$(window).resize(function() {  
-				    $container4.isotope('updateSortData').isotope();
+				$(window).resize(function() {
+			    $container4.isotope('updateSortData').isotope();
+			    $container4.isotope('layout');
 				});
 
 			}());
-		    </script>
+	    </script>
 	
     </body>
 </html>

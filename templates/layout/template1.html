@@ -33,7 +33,7 @@
 				</div><!-- .row -->
 
 		    <div class="row">
-		        <!--(bake /templates/components/_filters.html)-->
+		        <!--(bake /templates/components/_filters-bird.html)-->
 		    </div><!-- .row -->
 
 		    <div class="row v1">
@@ -79,6 +79,8 @@
 	<!--(bake /templates/structure/footer.html)-->
 
 			<script type="text/javascript">
+			(function () {
+				'use strict';
 		      var rangeFrom = $('#rangeSliderFrom'),
 		          rangeTo = $('#rangeSliderTo');
 
@@ -107,6 +109,26 @@
 					  gutter: '.grid-gutter'
 					}
 				});
+
+				$container1.imagesLoaded( function() {
+				  $container1.isotope('layout');
+				});
+
+				$(window).resize(function() {  
+			    $container1.isotope('updateSortData').isotope();
+			    $container1.isotope('layout');
+				});
+
+				   AdobeEdge.loadComposition('birds', 'EDGE-845735', {
+				    scaleToFit: "none",
+				    centerStage: "none",
+				    minW: "0",
+				    maxW: "undefined",
+				    width: "860px",
+				    height: "769px"
+				}, {dom: [ ]}, {dom: [ ]});
+
+			}());
 		    </script>
 	
     </body>

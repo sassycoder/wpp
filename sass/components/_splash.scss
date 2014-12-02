@@ -1,0 +1,142 @@
+.splash {
+	position: relative;
+
+	.action-btns {
+		display: block;
+		text-align: right;
+	}
+	.register-link, .login-link {
+		display: inline-block;
+		float: none;
+	}
+	.copy {
+		text-align: right;
+
+		h1 {
+			position: absolute;
+			right: 0;
+			top: 140px;
+			display: inline-block;
+			color: #86dade;
+
+			.first {
+				font-family: "WaitroseLogofont";
+				font-size: 35px;
+				font-size: 3.5rem;
+				line-height: 42px;
+				line-height: 4.2rem;
+				position: absolute;
+				left: 108px;
+				top: 15px;
+			}
+			.second {
+				font-family: "WaitroseHandscript";
+				font-size: 158px;
+				font-size: 15.8rem;
+				line-height: 190px;
+				line-height: 19rem;
+				color: #fdb813;
+			}
+			.third {
+				font-family: "WaitroseRegular";
+				font-size: 51px;
+				font-size: 5.1rem;
+				line-height: 24px;
+				position: absolute;
+				line-height: 2.4rem;
+				left: 180px;
+				top: 145px;
+			}
+			.fourth {
+				font-family: "WaitroseLogofont";
+				font-size: 23px;
+				font-size: 2.3rem;
+				line-height: 24px;
+				line-height: 2.4rem;
+				text-transform: uppercase;
+				position: absolute;
+				white-space: nowrap;
+				left: 180px;
+				top: 180px;
+			}
+		}
+		h2 {
+			position: absolute;
+			right: 0;
+			top: 340px;
+			display: inline-block;
+			color: #86dade;
+			width: 235px;
+			font-size: 24px;
+			font-size: 2.4rem;
+			line-height: 28px;
+			line-height: 2.8rem;
+			font-family: 'WaitroseRegular';
+			text-align: left;
+		}
+	}
+}
+
+.edgeLoad-EDGE-3788328 { visibility:hidden; }
+ #Stage { background-color: transparent!important; }
+.flow-wrapper { 
+  position: absolute; 
+  top: 50px; 
+  left: 0; 
+  z-index: -1;
+}
+
+@media all and (max-width: 1023px) {
+	.flow-wrapper { 
+		top: auto;
+		bottom: 50px;
+	}
+}
+
+@media all and (max-width: 767px) {
+	.flow-wrapper { 
+		top: auto;
+		bottom: 0;
+	}
+	.splash .copy {
+		h1 {
+			top: 30px;
+			.first {
+				left: 65px;
+				top: 42px;
+				font-size: 20px;
+				font-size: 2rem;
+			}
+			.second {
+				font-size: 98px;
+				font-size: 9.8rem;
+			}
+			.third {
+				left: 115px;
+				top: 125px;
+				font-size: 31px;
+				font-size: 3.1rem;
+			}
+			.fourth {
+				left: 115px;
+				top: 147px;
+				font-size: 13px;
+				font-size: 1.3rem;
+			}
+		}
+		h2 {
+			top: 183px;
+			width: 144px;
+			font-size: 14px;
+			font-size: 1.4rem;
+			line-height: 18px;
+			line-height: 1.8rem;
+		}
+	}
+}
+
+
+
+
+
+

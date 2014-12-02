@@ -177,6 +177,7 @@
 		        				<a href="#" class="toggle bttn secondary start icon_grid-2x2 view-grid active">&nbsp;</a>
 		        				<a href="#" class="toggle bttn secondary end icon_grid-3x3 view-list">&nbsp;</a>
 		        			</div>
+		        			<div id="Stage" class="EDGE-2896030 rose"></div>
 		        		</div>
 		        	</div>
 		        	<div class="facets cf">
@@ -415,37 +416,52 @@
 			        }
 			      });
 
-			    var $container2 = $('.v2');
+				    var $container2 = $('.v2');
 
-					$container2.isotope({
-					  // options
-					  itemSelector: '.pane',
-					  layoutMode: 'masonry',
-					  masonry: {
-					  	columnWidth: '.grid-sizer',
-						  gutter: '.grid-gutter'
-						},
-						getSortData: {
-					    order: function (item) {
-					    	var screenWidth = $(window).innerWidth(),
-					    		order = new Array(),
-					    		orderData = $(item).data('order');
-					    		order = JSON.parse("[" + orderData + "]");
+						$container2.isotope({
+						  // options
+						  itemSelector: '.pane',
+						  layoutMode: 'masonry',
+						  masonry: {
+						  	columnWidth: '.grid-sizer',
+							  gutter: '.grid-gutter'
+							},
+							getSortData: {
+						    order: function (item) {
+						    	var screenWidth = $(window).innerWidth(),
+						    		order = new Array(),
+						    		orderData = $(item).data('order');
+						    		order = JSON.parse("[" + orderData + "]");
 
-					    	if (screenWidth > 1023) {
-					    		return order[0];
-					    	} else if (screenWidth < 1023 && screenWidth > 767) {
-					    		return order[1] === undefined ? order[0] : order[1];
-					    	} else return order[2] === undefined ? order[1] : order[2];
-					    }
-					  },
-					  // sort by data-order
-					  sortBy: 'order'
+						    	if (screenWidth > 1023) {
+						    		return order[0];
+						    	} else if (screenWidth < 1023 && screenWidth > 767) {
+						    		return order[1] === undefined ? order[0] : order[1];
+						    	} else return order[2] === undefined ? order[1] : order[2];
+						    }
+						  },
+						  // sort by data-order
+						  sortBy: 'order'
+						});
+
+					$container2.imagesLoaded( function() {
+					  $container2.isotope('layout');
 					});
 
-					$(window).resize(function() {  
-					    $container2.isotope('updateSortData').isotope();
+					$(window).resize(function() {
+				    $container2.isotope('updateSortData').isotope();
+				    $container2.isotope('layout');
 					});
+
+				   AdobeEdge.loadComposition('rose', 'EDGE-2896030', {
+					    scaleToFit: "none",
+					    centerStage: "none",
+					    minW: "0",
+					    maxW: "undefined",
+					    width: "240px",
+					    height: "240px"
+					}, {"dom":{}}, {"dom":{}});
+
 				}());
 		    </script>
 	
