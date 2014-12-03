@@ -10,7 +10,6 @@
 			$this.next('.export-buttons').slideUp('fast', function () {
 				$this.toggleClass('active');
 			});
-			return;
 		} else {
 
 			$allButtons.each(function () {

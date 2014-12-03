@@ -28,6 +28,7 @@
 	});
 
 	$document.on('click', '.view-grid, .view-list', function (ev) {
+		ev.preventDefault();
 		if ($(this).hasClass('active')) {
 			return;
 		} else {
@@ -35,7 +36,6 @@
 			$body.toggleClass('toggle-mode');
 		}
 		$('.v1, .v2, .v3, .v4').isotope('updateSortData').isotope();
-		ev.preventDefault();
 	});
 
 	$document.on('click', '.bttn.filters, .closeFilters', function (ev) {
