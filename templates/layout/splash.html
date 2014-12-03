@@ -8,7 +8,7 @@
 	<!--(bake /templates/structure/html-header.html)-->
 </head>
 
-<body class="wpp">
+<body class="wpp splash-page">
 <div><a href="#skipnav" class="skip">Skip to main content</a></div>
 <div class="actions">
 	<a href="#" class="toggle-grid">Toggle grid</a>
@@ -17,14 +17,17 @@
 
 <div class="wrapper">
 
+  <!--(bake /templates/structure/header.html)-->
+
 	<div class="main off-area">
     <a id="skipnav" tabindex="-1"></a>
 
   <!-- Start Animation -->
-  <div id="Stage" class="EDGE-3788328"></div>
+  <div id="Stage" class="EDGE-3788328 flowers"></div>
+  <div id="Stage2" class="EDGE-461868 rabbit"></div>
   <!-- End Animation -->
 
-  <div class="component splash">
+  <div class="component splash cf">
     <div class="row">
         <div class="pane base12">
           <div class="action-btns">
@@ -147,12 +150,21 @@
 
 <script>
    AdobeEdge.loadComposition('test', 'EDGE-3788328', {
-    scaleToFit: "both",
-    centerStage: "none",
+    scaleToFit: "none",
+    centerStage: "horizontal",
     minW: "0",
-    maxW: "none",
+    maxW: "undefined",
     width: "550px",
     height: "465px"
+}, {"dom":{}}, {"dom":{}});
+
+   AdobeEdge.loadComposition('rabbit', 'EDGE-461868', {
+    scaleToFit: "none",
+    centerStage: "none",
+    minW: "0",
+    maxW: "undefined",
+    width: "127px",
+    height: "182px"
 }, {"dom":{}}, {"dom":{}});
 </script>
 

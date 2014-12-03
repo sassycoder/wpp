@@ -44,12 +44,16 @@
 		&.bird {
 			height: 655px!important;
 			width: 860px!important;
-			bottom: 240px!important;
+			top: -330px!important;
 			zoom: 0.1;
 		}
 		&.rose {
-			bottom: 0!important;
+			top: -110px !important;
 			zoom: 0.4;
+		}
+		&.eggs {
+			top: -148px !important;
+			zoom: 0.2;
 		}
 		
 	}
