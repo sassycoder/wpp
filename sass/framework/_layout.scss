@@ -13,6 +13,9 @@
   .pane.base#{$i}-#{$i + 1} { @extend .base#{$i}; }
 }
 
+.pane.base9-4 { @extend .base9; }
+.pane.base6-4 { @extend .base6; }
+
 .toggle-mode {
 
   .row .pane {
@@ -25,6 +28,8 @@
     .pane.base#{$i}-#{$i + 1} { @extend .base#{$i + 1}; }
   }
 
+  .pane.base9-4 { @extend .base4; }
+  .pane.base6-4 { @extend .base4; }
 }
 
 @media (max-width: 1023px) {

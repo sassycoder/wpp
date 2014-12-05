@@ -20,7 +20,7 @@
 
 	<!--(bake /templates/structure/header.html)-->
 
-		<div class="main">
+		<div class="main off-area">
 		    <a id="skipnav" tabindex="-1"></a>
 
         <div class="row">
@@ -33,12 +33,12 @@
 				</div><!-- .row -->
 
 		    <div class="row">
-		        <!--(bake /templates/components/_filters.html)-->
+		        <!--(bake /templates/components/_filters-bird.html)-->
 		    </div><!-- .row -->
 
 		    <div class="row v1">
-					<div class="pane base9 tp12 ml12">
-						<div class="img-wrapper hero"><img src="assets/img/structure/hero.jpg" alt=""></div>
+					<div class="pane base9-4 tp12 ml6 mp12">
+						<!--(bake /templates/components/_infobox-hero.html)-->
 					</div>
 					<div class="pane base3-4 grid-sizer tp-mgZero ml6 ml-mgZero mp12">
 						<!--(bake /templates/components/_infobox.html)-->
@@ -79,6 +79,8 @@
 	<!--(bake /templates/structure/footer.html)-->
 
 			<script type="text/javascript">
+			(function () {
+				'use strict';
 		      var rangeFrom = $('#rangeSliderFrom'),
 		          rangeTo = $('#rangeSliderTo');
 
@@ -107,6 +109,26 @@
 					  gutter: '.grid-gutter'
 					}
 				});
+
+				$container1.imagesLoaded( function() {
+				  $container1.isotope('layout');
+				});
+
+				$(window).resize(function() {  
+			    $container1.isotope('updateSortData').isotope();
+			    $container1.isotope('layout');
+				});
+
+				   AdobeEdge.loadComposition('birds', 'EDGE-845735', {
+				    scaleToFit: "none",
+				    centerStage: "none",
+				    minW: "0",
+				    maxW: "undefined",
+				    width: "860px",
+				    height: "769px"
+				}, {dom: [ ]}, {dom: [ ]});
+
+			}());
 		    </script>
 	
     </body>

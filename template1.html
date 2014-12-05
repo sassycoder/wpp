@@ -78,13 +78,6 @@
 						          <li><a href="">Cakes &amp; Bakes</a></li>
 						          <li><a href="">Flowers</a></li>
 						        </ul>
-						        <ul class="mobile">
-						        	<li><a href="">Your Lightbox</a></li>
-						        	<li><a href="">Log out</a></li>
-						        	<li><a href="">Contact Us</a></li>
-						        	<li><a href="">Waitrose Media Centre</a></li>
-						        	<li><a href="">Privacy Policy</a></li>
-						        </ul>
 							  </div>
 							</div>
 	          </li>
@@ -101,13 +94,6 @@
 					          <li><a href="">Cakes &amp; Glassware</a></li>
 					          <li><a href="">Flowers</a></li>
 					        </ul>
-					        <ul class="mobile">
-						        	<li><a href="">Your Lightbox</a></li>
-						        	<li><a href="">Log out</a></li>
-						        	<li><a href="">Contact Us</a></li>
-						        	<li><a href="">Waitrose Media Centre</a></li>
-						        	<li><a href="">Privacy Policy</a></li>
-						        </ul>
 					      </div>
 							</div>
 	          </li>
@@ -126,18 +112,16 @@
 					          <li><a href="">Seasonal Non-Food</a></li>
 					          <li><a href="">Flowers</a></li>
 					        </ul>
-					        <ul class="mobile">
+					      </div>
+							</div>
+	          </li>
+	          <ul class="mobile">
 						        	<li><a href="">Your Lightbox</a></li>
 						        	<li><a href="">Log out</a></li>
 						        	<li><a href="">Contact Us</a></li>
 						        	<li><a href="">Waitrose Media Centre</a></li>
 						        	<li><a href="">Privacy Policy</a></li>
 						        </ul>
-					      </div>
-							</div>
-	          </li>
-	
-	          
 	        </ol>
 	      </div>
 	    </nav>
@@ -145,12 +129,12 @@
 	
 				<div class="search">				
 					<a href="#" class="show-search icon_search"><span>Search</span></a>
-					<input id="global-search" class="global-search" name="global-search" placeholder="Search" type="text" value="" data-width="345px">
+					<input id="global-search" class="global-search" name="global-search" placeholder="Search" type="text" value="" data-width="344px">
 				</div>
 			</div>	
 	</header><!-- end header -->
 
-		<div class="main">
+		<div class="main off-area">
 		    <a id="skipnav" tabindex="-1"></a>
 
         <div class="row">
@@ -177,9 +161,10 @@
 		        				<a href="#" class="toggle bttn secondary start icon_grid-2x2 view-grid active">&nbsp;</a>
 		        				<a href="#" class="toggle bttn secondary end icon_grid-3x3 view-list">&nbsp;</a>
 		        			</div>
+		        			<div id="Stage" class="EDGE-845735 bird"></div>
 		        		</div>
 		        	</div>
-		        	<div class="facets active cf">
+		        	<div class="facets cf">
 		        		<div class="row">
 		        			<div class="pane base6 ml12 mp12">
 		        				<h3>
@@ -227,8 +212,22 @@
 		    </div><!-- .row -->
 
 		    <div class="row v1">
-					<div class="pane base9 tp12 ml12">
-						<div class="img-wrapper hero"><img src="assets/img/structure/hero.jpg" alt=""></div>
+					<div class="pane base9-4 tp12 ml6 mp12">
+						<div class="component infobox hero cf">
+							<div class="img-wrapper">
+								<img src="assets/img/structure/hero.jpg" alt="">
+							</div>
+							<div class="wrapper-info">
+								<div class="expand cf">
+									<p class="title">Waitrose Herb Jars</p>
+									<p class="price">£15</p>
+									<button class="bttn" type="submit">
+										<span class="icon icon_plus"></span>
+										<span class="text">Add</span>
+									</button>
+								</div>
+							</div>
+						</div>
 					</div>
 					<div class="pane base3-4 grid-sizer tp-mgZero ml6 ml-mgZero mp12">
 						<div class="component infobox cf">
@@ -415,7 +414,7 @@
 	
 				</div>
 				<div class="pane base4 tp5 ml12 ml-mgZero">
-					<p>Follow us</p>
+					<p class="follow">Follow us</p>
 					<a href="#" class="social-icon social_facebook"></a>
 					<a href="#" class="social-icon social_twitter"></a>
 					<a href="#" class="social-icon social_pinterest"></a>
@@ -429,9 +428,11 @@
 	
 	<script type="text/javascript" src="assets/js/lib.min.js"></script>
 	<script type="text/javascript" src="assets/js/framework.min.js"></script>
-	<script type="text/javascript" src="assets/js/components.js"></script>
+	<script type="text/javascript" src="assets/js/components.min.js"></script>
 
 			<script type="text/javascript">
+			(function () {
+				'use strict';
 		      var rangeFrom = $('#rangeSliderFrom'),
 		          rangeTo = $('#rangeSliderTo');
 
@@ -460,6 +461,26 @@
 					  gutter: '.grid-gutter'
 					}
 				});
+
+				$container1.imagesLoaded( function() {
+				  $container1.isotope('layout');
+				});
+
+				$(window).resize(function() {  
+			    $container1.isotope('updateSortData').isotope();
+			    $container1.isotope('layout');
+				});
+
+				   AdobeEdge.loadComposition('birds', 'EDGE-845735', {
+				    scaleToFit: "none",
+				    centerStage: "none",
+				    minW: "0",
+				    maxW: "undefined",
+				    width: "860px",
+				    height: "769px"
+				}, {dom: [ ]}, {dom: [ ]});
+
+			}());
 		    </script>
 	
     </body>

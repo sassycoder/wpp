@@ -1,0 +1,213 @@
+.splash-page {
+	header { display: none; }
+
+	.edgeLoad-EDGE-3788328 { visibility:hidden; }
+	 #Stage { 
+	 	background-color: transparent!important;
+ 			bottom: -30px!important;
+ 			right: auto!important;
+			width: 450px!important;
+			z-index: -1!important;
+			zoom: 2;
+	 }
+	 #Stage2 {
+	 	position: absolute!important;
+	 	bottom: 0!important;
+	 	right: 0!important;
+	 }
+}
+
+.splash {
+	position: relative;
+
+	.action-btns {
+		display: block;
+		text-align: right;
+	}
+	.register-link, .login-link {
+		display: inline-block;
+		float: none;
+	}
+	.copy {
+		text-align: right;
+
+		h1 {
+			position: absolute;
+			right: 0;
+			top: 140px;
+			display: inline-block;
+			color: #86dade;
+
+			.first {
+				font-family: "WaitroseLogofont";
+				font-size: 35px;
+				font-size: 3.5rem;
+				line-height: 42px;
+				line-height: 4.2rem;
+				position: absolute;
+				left: 108px;
+				top: 15px;
+			}
+			.second {
+				font-family: "WaitroseHandscript";
+				font-size: 158px;
+				font-size: 15.8rem;
+				line-height: 190px;
+				line-height: 19rem;
+				color: #fdb813;
+			}
+			.third {
+				font-family: "WaitroseRegular";
+				font-size: 51px;
+				font-size: 5.1rem;
+				line-height: 24px;
+				position: absolute;
+				line-height: 2.4rem;
+				left: 180px;
+				top: 145px;
+			}
+			.fourth {
+				font-family: "WaitroseLogofont";
+				font-size: 23px;
+				font-size: 2.3rem;
+				line-height: 24px;
+				line-height: 2.4rem;
+				text-transform: uppercase;
+				position: absolute;
+				white-space: nowrap;
+				left: 180px;
+				top: 180px;
+			}
+		}
+		h2 {
+			position: absolute;
+			right: 0;
+			top: 340px;
+			display: inline-block;
+			color: #86dade;
+			width: 235px;
+			font-size: 24px;
+			font-size: 2.4rem;
+			line-height: 28px;
+			line-height: 2.8rem;
+			font-family: 'WaitroseRegular';
+			text-align: left;
+		}
+	}
+}
+
+@media all and (max-width: 1023px) {
+	.splash-page {
+		header {
+			display: block;
+			height: 235px;
+			.wrapper-header h1 { display: none; }
+		}
+		#Stage {
+			width: auto!important;
+			right:0px!important;
+			zoom: 1.3;
+	 }
+	}
+	.splash {
+		position: static;
+
+		.action-btns {
+			text-align: center;
+			margin: 100px 0 0 0;
+		}
+		.copy {
+			h1 {
+				left: 70px;
+				top: 0;
+				right: auto;
+				.first, .second, .third, .fourth {
+					color: #fff; 
+				}
+				.third {
+					top: 155px;
+				}
+			}
+			h2 { 
+				color: #fff;
+				left: 495px;
+				top: 74px; 
+				right: auto;
+			}
+		}
+	}
+}
+
+@media all and (max-width: 767px) {
+
+	.splash-page {
+		#Stage {
+			zoom: 1.3;
+		}
+		#Stage2 {
+	 	display: none;
+	 }
+	}
+
+		
+
+	.splash {
+		.action-btns {
+			text-align: center;
+			margin: 100px 0 0 0;
+		}
+		.copy {
+			h1 {
+				.first {
+					left: 65px;
+					top: 42px;
+					font-size: 20px;
+					font-size: 2rem;
+				}
+				.second {
+					font-size: 98px;
+					font-size: 9.8rem;
+				}
+				.third {
+					left: 115px;
+					top: 125px;
+					font-size: 31px;
+					font-size: 3.1rem;
+				}
+				.fourth {
+					left: 115px;
+					top: 147px;
+					font-size: 13px;
+					font-size: 1.3rem;
+				}
+			}
+			h2 {
+				top: 223px;
+				width: 144px;
+				left: auto;
+				right: 0;
+				font-size: 14px;
+				font-size: 1.4rem;
+				line-height: 18px;
+				line-height: 1.8rem;
+				color: #86dade;
+			}
+		}
+	}
+}
+
+@media all and (max-width: 480px) {
+	.splash-page {
+		#Stage {
+			width: 93.6%;
+			zoom: 0.8;
+		}
+	}
+	.splash .copy h1 { left: 0;}
+}
+
+
+
+
+
+

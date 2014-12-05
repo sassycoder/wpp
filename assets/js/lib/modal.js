@@ -5,6 +5,12 @@ jQuery(document).ready(function($) {
 		$('.tab-content #login_tab').addClass('active');
 		jQuery('#alimir_bootmodal').modal('show');
 	});
+	$('.add-more').click(function(){
+		jQuery('#add_more_popup').modal('show');
+	});
+	$('.wine').click(function(){
+		jQuery('#wine_popup').modal('show');
+	});
 	$('.register-link').click(function(){
 		$('.tab-content .tab-pane').removeClass('active');
 		$('.tab-content #register_tab').addClass('active');

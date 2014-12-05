@@ -51,7 +51,6 @@ module.exports = function (grunt) {
       },
       library: {
         src: ['assets/js/lib/single/jquery-2.1.1.js',
-              'assets/js/lib/single/owl.carousel.js',
               'assets/js/lib/*.js'],
         dest: 'assets/js/lib.js'
       }
@@ -77,12 +76,17 @@ module.exports = function (grunt) {
             'template2.html': 'templates/layout/template2.html',
             'template3.html': 'templates/layout/template3.html',
             'template4.html': 'templates/layout/template4.html',
+            'template5.html': 'templates/layout/template5.html',
+            'template6.html': 'templates/layout/template6.html',
             'lightbox.html': 'templates/layout/lightbox.html',
+            'splash.html': 'templates/layout/splash.html',
             'modal.html': 'templates/components/modal.html',
             'infobox.html': 'templates/components/infobox.html',
             'filters.html': 'templates/components/filters.html',
             'buttons.html': 'templates/components/buttons.html',
-            'lightbox-item.html': 'templates/components/lightbox-item.html'
+            'carousel.html': 'templates/components/carousel.html',
+            'lightbox-item.html': 'templates/components/lightbox-item.html',
+            'layout_test.html': 'templates/layout/layout_test.html'
         }
       }
     },

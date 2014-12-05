@@ -1,11 +1,13 @@
 .component.filters {
+	position: relative;
 	width: 100%;
-	margin: 0 0 16px 0;
+	margin: 0;
 	.bttn {
-		border: 1px solid $btn_primary;
+		border: 1px solid $btn_primary_active;
 
 		&.secondary {
 			text-transform: uppercase;
+			//background-color: #fff;
 		}
 	}
 
@@ -33,17 +35,43 @@
 	.view-toggles {
 		float: right;
 	}
+	#Stage {
+		position: absolute!important;
+		right: 24%!important;
+		
+		
+
+		&.bird {
+			height: 655px!important;
+			width: 860px!important;
+			top: -330px!important;
+			zoom: 0.1;
+		}
+		&.rose {
+			top: -110px !important;
+			zoom: 0.4;
+		}
+		&.eggs {
+			top: -148px !important;
+			zoom: 0.2;
+		}
+		
+	}
 
 	.top-btns {
 		.toggle { float: right; }
 	}
 
 	.facets {
+		display: none;
 		float: left;
 		width: 100%;
-		background:url("/assets/img/structure/white-line.png") 50% 0 repeat-y $btn_primary;
-    background-size: 100%;
-    position: relative;
+		margin: 0 0 20px 0;
+		background:url("/assets/img/structure/white-line.png") 50% 0 repeat-y $btn_primary_active;
+	    background-size: 100%;
+	    position: relative;
+	    overflow: visible!important;
+	    z-index: 0;
 
 		h3 {
 			color: #fff;
@@ -78,13 +106,17 @@
 
 		.bttn {
 			border-color: #fff;
+			background-color: $btn_secondary_col;
+			color: $btn_primary;
 
 			&.reset {
 				margin: 0 16px 16px;
+				background-color: #000;
 			}
 
 			&:active, &:focus, &:hover, &.active {
 				color: $btn_primary_col;
+				background-color: $btn_primary;
 			}
 		}
 
@@ -159,6 +191,8 @@
 		margin: 0 0 4% 0;
 		.pane { margin-bottom: 0!important; }
 
+		#Stage { display: none;}
+
 		.top-btns {
 			.bttn {
 				width: 50%;
@@ -176,9 +210,9 @@
 		.facets {
 			background-image: none;
 			background-color: #fff;
+			overflow: hidden!important;
 
 			h3 {
-				border: none;
 				padding: 0;
 				text-align: center;
 				font-family: WaitroseRegular;
@@ -186,7 +220,11 @@
 				font-size: 1.6rem;
 				text-transform: uppercase;
 				color: #000;
-				background: $btn_primary;
+				background: $btn_secondary_col;
+
+				&:first-child {
+					border-top: 1px solid #fff;
+				}
 
 				a {
 					padding: 14px 10px;
@@ -204,18 +242,20 @@
 				
 			}
 			.bttn {
-				border-color: $btn_primary;
+				border-color: $btn_secondary_col;
+
 				&.reset {
 					margin: 0;
 					padding: 14px 10px;
-					background: $btn_primary;
+					background: $btn_secondary_col;
 					color: #000;
 					width: 100%;
 					border-radius: 0 0 4px 4px;
 					font-family: WaitroseRegular;
+					border-top: 1px solid #fff;
 				}
 				&.active {
-					border-color: $btn_primary;
+					border-color: $btn_secondary_col;
 				}
 			}
 			.pane {
@@ -227,6 +267,7 @@
 				background: #fff;
 				&.type, &.themes {
 					text-align: center;
+					font-size: 0;
 					.bttn {
 						float: none;
 						display: inline-block;
@@ -239,12 +280,12 @@
 		}
 
 		.irs-line {
-			border-color: $btn_primary;
+			border-color: $btn_secondary_col;
 			background: transparentize($btn_primary, 0.5);
 		}
 		.irs-bar {
-			border-color: $btn_primary;
-			background: $btn_primary;
+			border-color: $btn_secondary_col;
+			background: $btn_secondary_col;
 		}
 
 		.close, .view-toggles {display: none;}
