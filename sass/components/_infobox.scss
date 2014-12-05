@@ -6,15 +6,16 @@
 
 	&.hero {
 		.img-wrapper {
-			height: 456px;
 			width: 666px;
+			height: 500px;
 		}
 	}
 
 	&.large {
 		.img-wrapper {
-			height: 398px;
 			width: 438px;
+			height: 417px;
+			
 		}
 	}
 
@@ -34,10 +35,14 @@
 		position: relative;
 		width: 100%;
 		background-color: #fff;
+		display: table;
+		min-height: 83px;
 
 		.expand {
 			background: #fff;
 			padding: 10px 0 15px;
+			display: table-cell;
+			vertical-align: middle;
 		}
 	}
 
@@ -77,7 +82,10 @@
 		.wrapper-info {
 			display: block;
 			.expand {
-				margin-top: -46px;
+				//margin-top: -46px;
+				position: absolute;
+				bottom: 0;
+				width: 100%;
 				text-align: center;
 
 				.bttn {
@@ -158,6 +166,7 @@
 		&:hover, &:active, &:focus {
 			.wrapper-info .expand {
 				margin-top: 0;
+				position: static;
 			}
 		}
 	}
@@ -165,15 +174,18 @@
 
 @media (max-width: 1023px) {
 	.component.infobox {
+		.wrapper-info {
+			min-height: 66px;
+		}
 		&.hero {
 			.img-wrapper {
-				height: 456px;
+				height: 560px;
 				width: 746px;
 			}
 		}
 		&.large {
 			.img-wrapper {
-				height: 398px;
+				height: 344px;
 			}
 		}
 	}
@@ -204,7 +216,8 @@
 			right: 0;
 			margin-left: 16px;
 			height: 100%;
-			width: 43.5%;
+			width: 53.5%;
+			display: block;
 		}
 
 		.bttn {
@@ -215,6 +228,10 @@
 			padding: 5px;
 			width: auto;
 			border-radius: 4px;
+
+			&.wine {
+				right: 60px;
+			}
 
 			.text {
 					display: none;
@@ -228,6 +245,12 @@
 					padding-top: 0;
 				}
 			}
+			.glyphicons {
+				display: block;
+				&:before {
+					padding: 8px 8px 8px 7px;
+				}
+			}
 		}
 
 		.title,
@@ -238,7 +261,33 @@
 		&:hover, &:active, &:focus {
 			.wrapper-info .expand {
 				margin-top: 0;
+				position: static;
 			}
 		}
 	}
+}
+
+@media (max-width: 480px) {
+	.toggle-mode .component.infobox, .component.infobox {
+
+		&.hero, &.large {
+			.img-wrapper {
+				width: 40.5%;
+				height: 27.3vw;
+			}
+		}
+
+		.img-wrapper {
+			width: 40.5%;
+			height: 27.3vw;
+		}
+
+		.wrapper-info {
+			margin-left: 16px;
+			height: 100%;
+			width: 53.5%;
+		}
+
+	}
+
 }

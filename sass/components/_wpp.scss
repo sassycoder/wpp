@@ -3,7 +3,7 @@
 		&.row {
 			.pane {
 				margin: 0;
-				margin-bottom: 20px;
+				margin-bottom: 16px;
 			}
 		}
 	}
@@ -23,7 +23,7 @@
 		}
 	}
 	.img-wrapper {
-		height: 160px;
+		height: 158px;
 		width: 210px;
 		border: 1px solid #d6d6d6;
 		padding: 0;
@@ -42,7 +42,7 @@
 			display: block;
 		}
 		&.box-large {
-			height: 456px;
+			height: 500px;
 			border: none;
 			padding: 0;
 		}
@@ -53,8 +53,6 @@
 	}
 	img {
 		width: 100%;
-		position: absolute;
-		left: -9999px;
 	}
 
 	.info {
@@ -117,8 +115,15 @@
 
 @media all and (max-width: 1023px) {
 	.wpp {
+		.v1, .v2, .v3, .v4 {
+			&.row {
+				.pane {
+					margin-bottom: 20px;
+				}
+			}
+		}
 		.img-wrapper {
-			height: 172px;
+			height: 128px;
 
 			&.hero {
 				height: 494px;
