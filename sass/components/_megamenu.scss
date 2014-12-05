@@ -148,7 +148,7 @@
   .megamenu-container {
       min-width:0;
 
-      a.mobile {
+      .mobile {
         display: block;
       }
 
@@ -224,15 +224,31 @@
 
   .megamenu-container ol .site-section {
 
-    &.third .menu-items {
+    &.first .menu-items li {
+      background-color: lighten(#e46285, 30%);
+
+      &:hover, &:focus, &:active {
+          background-color: lighten(#e46285, 25%);
+          color: #333;
+        }
+    }
+
+    &.second .menu-items li {
+      background-color: lighten(#efb4ca, 13%);
+
+      &:hover, &:focus, &:active {
+          background-color: lighten(#efb4ca, 10%);
+          color: #333;
+        }
+    }
+
+    &.third .menu-items li {
       background-color: #fffbe8;
 
-      a {
-        &:hover, &:focus, &:active {
+      &:hover, &:focus, &:active {
           background-color: #fff7d1;
           color: #333;
         }
-      }
     }
 
     &.first, &.second, &.third {
