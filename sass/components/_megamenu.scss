@@ -148,9 +148,9 @@
   .megamenu-container {
       min-width:0;
 
-      .mobile {
-      display: block;
-    }
+      a.mobile {
+        display: block;
+      }
 
     .home {
       font-size: 17px;
@@ -190,6 +190,8 @@
 
   .megamenu-container ol {
     float: none;
+
+    &.open > .mobile { display: block; }
   }
 
   .megamenu-container ol .site-section {
@@ -205,6 +207,10 @@
           right: -8px;
         }
       }
+    }
+
+    &.active {
+      + .mobile { display: block; }
     }
   }
 
@@ -239,7 +245,9 @@
 
   .megamenu-container .inner {
     box-shadow: none;
-    ul {
+  }
+
+  ul {
       &.mobile {
         border-top: 1px dotted #ccc;
       }
@@ -247,10 +255,29 @@
         &:first-child {
           border: none;
         }
+        padding-left: 10px;
         border-top: 1px dotted #ccc;
+
+        a {
+          display: block;
+          padding: 8px 0 3px 16px;
+          color: #333;
+          font-family: 'WaitroseRegular';
+          font-size: 16px;
+          font-size: 1.6rem;
+          line-height: 26px;
+          line-height: 2.6rem;
+          position: relative;
+
+          &:before {
+            font-size: 14px;
+            padding: 5px 3px 0 0;
+            position: absolute;
+            left: 0;
+          }
+        }
       }
     }
-  }
 }
 
 @media only screen and (max-width: 567px) {

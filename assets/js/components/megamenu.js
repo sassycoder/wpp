@@ -18,13 +18,13 @@
         , $menu = $this.closest('.megamenu-list')
         , closeFn = function (ev) {
             if ($(ev.target).closest('.megamenu-list').length === 0) {
-              $menu.find('.top-level-item').removeClass('active');
+              $menu.find('.top-level-item').removeClass('active').parents('.megamenu').removeClass('open');
               $menu.find('.mega-drop').hide();
               //console.log(ev);
             }
           };
 
-      $menu.find('.top-level-item').removeClass('active');
+      $menu.find('.top-level-item').removeClass('active').parents('.megamenu').removeClass('open');
       $menu.find('.mega-drop').hide();
 
       if (needsToOpen) {
@@ -32,7 +32,9 @@
           .addClass('active')
           .closest('li')
           .find('.mega-drop')
-          .show();
+          .show()
+          .parents('.megamenu')
+          .addClass('open');
 
         if (isTouch) {
           $document.scrollTop( $this.offset().top );
@@ -51,7 +53,7 @@
   $document.on('click', '.mega-drop .close', function (ev) {
     var $tab = $(this).closest('.site-section');
 
-    $tab.find('.top-level-item').removeClass('active');
+    $tab.find('.top-level-item').removeClass('active').parents('.megamenu').removeClass('open');
     $tab.find('.mega-drop').hide();
     ev.preventDefault();
   });
