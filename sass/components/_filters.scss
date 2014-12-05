@@ -39,27 +39,38 @@
 		position: absolute!important;
 		right: 24%!important;
 		
-		
-
 		&.bird {
 			height: 655px!important;
 			width: 860px!important;
 			top: -330px!important;
 			zoom: 0.1;
-		}
-		&.rose {
-			top: -110px !important;
-			zoom: 0.4;
+			-moz-transform: scale(0.1);
 		}
 		&.eggs {
 			top: -148px !important;
 			zoom: 0.2;
+			-moz-transform: scale(0.2);
 		}
-		
+	}
+
+	.rose {
+		position: absolute;
+		top: -38px;
+		right: 24%!important;
+		width: 103px;
+		height: 82px;
+		@include icons-sprite(rose_cropped);
+	}
+
+	@-moz-document url-prefix() {
+
+		#Stage.eggs {right: auto!important; top: -201px!important;}
+		#Stage.bird { right: auto!important; top: -320px!important; }
 	}
 
 	.top-btns {
-		.toggle { float: right; }
+		.toggle { float: left; }
+		.bttn.filters { float: left; margin-left: 8px; }
 	}
 
 	.facets {
@@ -191,7 +202,7 @@
 		margin: 0 0 4% 0;
 		.pane { margin-bottom: 0!important; }
 
-		#Stage { display: none;}
+		#Stage, .rose { display: none;}
 
 		.top-btns {
 			.bttn {

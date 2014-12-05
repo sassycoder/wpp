@@ -206,6 +206,10 @@
 			width: auto;
 			border-radius: 4px;
 
+			&.wine {
+				right: 60px;
+			}
+
 			.text {
 					display: none;
 				}
@@ -216,6 +220,12 @@
 
 				&:before {
 					padding-top: 0;
+				}
+			}
+			.glyphicons {
+				display: block;
+				&:before {
+					padding: 8px 8px 8px 7px;
 				}
 			}
 		}
