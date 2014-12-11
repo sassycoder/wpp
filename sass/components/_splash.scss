@@ -7,7 +7,7 @@
 	 	background-color: transparent!important;
  			bottom: -30px!important;
  			right: auto!important;
-			width: 450px!important;
+			width: 470px!important;
 			z-index: -1!important;
 	 }
 	 #Stage2 {
@@ -104,8 +104,8 @@
 @media all and (min-width: 1025px) {
 	.splash-page {
 		#Stage {
-			zoom: 2;
-			-moz-transform: scale(2);
+			zoom: 1.5;
+			-moz-transform: scale(1.5);
 		}
 	}
 	@-moz-document url-prefix() {
@@ -115,6 +115,9 @@
 
 @media all and (max-width: 1023px) {
 	.splash-page {
+		.megamenu-container .mega-btn {
+			display: none;
+		}
 		header {
 			display: block;
 			height: 235px;
@@ -171,7 +174,10 @@
 
 	.splash-page {
 		#Stage, #Stage2, #Stage3 {
-			display: none;
+			//display: none;
+		}
+		#Stage {
+			left: -12vw!important;
 		}
 	}
 
@@ -226,6 +232,15 @@
 	.splash-page {
 		#Stage {
 			width: 93.6%;
+			zoom: 0.5;
+			-moz-transform: scale(0.5);
+		}
+		#Stage2 {
+			zoom: 0.6;
+			-moz-transform: scale(0.6);
+		}
+		#Stage3 {
+			top: 149px!important;
 			zoom: 0.8;
 			-moz-transform: scale(0.8);
 		}

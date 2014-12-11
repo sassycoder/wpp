@@ -87,7 +87,8 @@ module.exports = function (grunt) {
             'carousel.html': 'templates/components/carousel.html',
             'lightbox-item.html': 'templates/components/lightbox-item.html',
             'layout_test.html': 'templates/layout/layout_test.html',
-            'layout_test2.html': 'templates/layout/layout_test2.html'
+            'layout_test2.html': 'templates/layout/layout_test2.html',
+            'contact.html': 'templates/layout/contact.html'
         }
       }
     },
