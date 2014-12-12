@@ -77,11 +77,11 @@
 	.title,
 	.price {
 		text-align: center;
+		padding: 0 5px;
 	}
 
 	.title {
 		font-family: 'Waitrosebold';
-		padding: 0 5px;
 	}
 
 	&:hover, &:active, &:focus {
@@ -106,9 +106,8 @@
 //toggle-mode layout
 .toggle-mode {
 	.modal-body {
-		.pane {
-			width: 100%!important;
-			margin-left: 0!important;
+		.component.infobox {
+			margin-top: 10px;
 		}
 	}
 	.component.infobox {
