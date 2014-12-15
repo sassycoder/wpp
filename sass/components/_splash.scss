@@ -114,7 +114,7 @@
 }
 
 @media all and (max-width: 1023px) {
-	.splash-page {
+	body.splash-page {
 		.megamenu-container .mega-btn {
 			display: none;
 		}
@@ -127,45 +127,45 @@
 			width: auto!important;
 			right:0px!important;
 	 }
-	}
-	.splash {
-		position: static;
+		 .splash {
+			position: static;
 
-		.action-btns {
-			text-align: center;
-			margin: 100px 0 0 0;
-		}
-		.copy {
-			h1 {
-				left: 20px;
-				top: 0;
-				right: auto;
-				.first, .second, .third, .fourth {
-					color: #fff; 
+			.action-btns {
+				text-align: center;
+				margin: 100px 0 0 0;
+			}
+			.copy {
+				h1 {
+					left: 20px;
+					top: 0;
+					right: auto;
+					.first, .second, .third, .fourth {
+						color: #fff; 
+					}
+					.first {
+						top: 35px;
+					} 
+					.second {
+						line-height: 190px;
+						line-height: 19rem;
+					}
+					.third {
+						top: 155px;
+					}
+					.fourth {
+						top: 185px;
+					}
 				}
-				.first {
-					top: 35px;
-				} 
-				.second {
-					line-height: 190px;
-					line-height: 19rem;
-				}
-				.third {
-					top: 155px;
-				}
-				.fourth {
-					top: 185px;
+				h2 { 
+					color: #fff;
+					left: 455px;
+					top: 74px; 
+					right: auto;
 				}
 			}
-			h2 { 
-				color: #fff;
-				left: 455px;
-				top: 74px; 
-				right: auto;
+			#Stage3 {
+				right: 11px!important;
 			}
-		}
-		#Stage3 {
-			right: 11px!important;
 		}
 	}
 }
@@ -173,59 +173,59 @@
 @media all and (max-width: 767px) {
 
 	.splash-page {
-		#Stage, #Stage2, #Stage3 {
-			//display: none;
-		}
 		#Stage {
 			left: -12vw!important;
 		}
 	}
 
-		
-
-	.splash {
-		.action-btns {
-			text-align: center;
-			margin: 100px 0 0 0;
+	body.splash-page {
+		#Stage, #Stage2, #Stage3 {
+			//display: none;
 		}
-		.copy {
-			h1 {
-				.first {
-					left: 65px;
-					top: 42px;
-					font-size: 20px;
-					font-size: 2rem;
+			.splash {
+			.action-btns {
+				text-align: center;
+				margin: 100px 0 0 0;
+			}
+			.copy {
+				h1 {
+					.first {
+						left: 65px;
+						top: 42px;
+						font-size: 20px;
+						font-size: 2rem;
+					}
+					.second {
+						font-size: 98px;
+						font-size: 9.8rem;
+					}
+					.third {
+						left: 115px;
+						top: 125px;
+						font-size: 31px;
+						font-size: 3.1rem;
+					}
+					.fourth {
+						left: 115px;
+						top: 147px;
+						font-size: 13px;
+						font-size: 1.3rem;
+					}
 				}
-				.second {
-					font-size: 98px;
-					font-size: 9.8rem;
-				}
-				.third {
-					left: 115px;
-					top: 125px;
-					font-size: 31px;
-					font-size: 3.1rem;
-				}
-				.fourth {
-					left: 115px;
-					top: 147px;
-					font-size: 13px;
-					font-size: 1.3rem;
+				h2 {
+					top: 223px;
+					width: 144px;
+					left: auto;
+					right: 0;
+					font-size: 14px;
+					font-size: 1.4rem;
+					line-height: 18px;
+					line-height: 1.8rem;
+					color: #86dade;
 				}
 			}
-			h2 {
-				top: 223px;
-				width: 144px;
-				left: auto;
-				right: 0;
-				font-size: 14px;
-				font-size: 1.4rem;
-				line-height: 18px;
-				line-height: 1.8rem;
-				color: #86dade;
-			}
 		}
-	}
+	}	
 }
 
 @media all and (max-width: 480px) {
@@ -240,12 +240,75 @@
 			-moz-transform: scale(0.6);
 		}
 		#Stage3 {
-			top: 149px!important;
 			zoom: 0.8;
 			-moz-transform: scale(0.8);
 		}
 	}
-	.splash .copy h1 { left: 0;}
+
+	div.splash-page {
+
+		#Stage3 {
+			top: -30px !important;
+			zoom: 0.5;
+			left: 350px;
+			right: auto!important;
+		}
+
+		.splash .copy {
+
+			h1 {
+				left: 0;
+				right: auto;
+				top: -53px;
+
+				.first {
+					font-size: 20px;
+					font-size: 2rem;
+					left: 65px;
+					top: 75px;
+
+				}
+
+				.second {
+					font-size: 98px;
+					font-size: 9.8rem;
+				}
+
+				.third {
+					font-size: 31px;
+					font-size: 3.1rem;
+					top: 155px;
+					left: 115px;
+				}
+
+				.fourth {
+					font-size: 13px;
+					font-size: 1.3rem;
+					left: 115px;
+					top: 175px;
+				}
+			}
+
+			h2 {
+				left: 115px;
+				right: auto;
+				top: 131px;
+				font-size: 14px;
+				font-size: 1.4rem;
+				line-height: 18px;
+				line-height: 1.8rem;
+				width: 144px;
+			}
+		}
+	}
+
+	body.splash-page {
+		
+		#Stage3 {
+			top: 149px!important;
+		}
+		.splash .copy h1 { left: 0;}
+	}
 }
 
 

@@ -80,6 +80,7 @@ module.exports = function (grunt) {
             'template6.html': 'templates/layout/template6.html',
             'lightbox.html': 'templates/layout/lightbox.html',
             'splash.html': 'templates/layout/splash.html',
+            'splash-with-menu.html': 'templates/layout/splash-with-menu.html',
             'modal.html': 'templates/components/modal.html',
             'infobox.html': 'templates/components/infobox.html',
             'filters.html': 'templates/components/filters.html',

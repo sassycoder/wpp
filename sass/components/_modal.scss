@@ -153,8 +153,10 @@
   .modal.fade.in, 
   .modal.container.fade.in,
   .modal.modal-overflow.fade.in {
-    top: 1%;
+    top: 3%;
     bottom: auto;
+    right: 4%;
+    left: 4%;
   }
   
   .modal-body,
