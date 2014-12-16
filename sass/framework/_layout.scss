@@ -14,6 +14,7 @@
 }
 
 .pane.base9-4 { @extend .base9; }
+.pane.base9-12 { @extend .base9; }
 .pane.base6-4 { @extend .base6; }
 
 .toggle-mode {
@@ -29,6 +30,7 @@
   }
 
   .pane.base9-4 { @extend .base4; }
+  .pane.base9-12 { @extend .base12; }
   .pane.base6-4 { @extend .base4; }
 }
 

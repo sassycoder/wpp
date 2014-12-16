@@ -209,7 +209,7 @@ ul li,ol li {
     font-family: "WaitroseRegular";
     background-color: $btn_secondary_bg;
 
-    &:hover, &:focus, &:active {
+    &:hover, &:active {
       background-color: $btn_primary_active;
       color: $btn_primary;
     }
@@ -464,6 +464,7 @@ header {
 
 footer {
   width: 100%;
+  margin-top: 50px;
   padding: 23px 0 0 0;
   background-color: #86dade;
   overflow: hidden;
@@ -559,13 +560,28 @@ footer {
 
 @media all and (max-width: 767px) {
   .wrapper-header {
+    &.main {
+      margin: 10px auto 9px;
+    }
+
     h1 {
-      width: 260px;
-      font-size: 32px;
-      font-size: 3.2rem;
+      width: 330px;
+      font-size: 22px;
+      font-size: 2.2rem;
       line-height: 32px;
       line-height: 3.2rem;
+
+      em {
+        font-size: 21px;
+        font-size: 2.1rem;
+        line-height: 30px;
+        line-height: 3rem;
+      }
     }  
+  }
+
+  #primary-navigation.megamenu-container .mega-btn {
+    top: -40px;
   }
 
   footer {
@@ -598,6 +614,14 @@ footer {
 @media all and (max-width: 480px) {
   .show-on-mobile {
     display: block;
+  }
+
+  .wrapper-header {
+    h1 {
+      font-size: 18px;
+      font-size: 1.8rem;
+      width: auto;
+    }
   }
 
   h2 {

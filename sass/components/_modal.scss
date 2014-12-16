@@ -317,6 +317,7 @@ Copyright (c) 2012 Dan Eden*/
   width: 36px;
   border-radius: 20px;
   line-height: 26px;
+  z-index: 99;
   @extend .icon_close;
 
   &:hover, &:active, &:focus {

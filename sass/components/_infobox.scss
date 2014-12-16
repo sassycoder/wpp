@@ -52,6 +52,11 @@
 		}
 	}
 
+	@-moz-document url-prefix() {
+		.wrapper-info { display: block; }
+		.wrapper-info .expand { display: block; }
+	}
+
 	.bttn {
 		display: none;
 		margin: 10px auto 0;
@@ -82,7 +87,7 @@
 	}
 
 	.title {
-		font-family: 'Waitrosebold';
+		font-family: 'WaitroseRegular';
 	}
 
 	&:hover, &:active, &:focus {
@@ -109,8 +114,13 @@
 	.modal-body {
 		.component.infobox {
 			margin-top: 10px;
+
+			.wrapper-info {
+				width: 70%;
+			}
 		}
 	}
+
 	.component.infobox {
 		&.hero, &.large {
 			.img-wrapper {
@@ -198,7 +208,49 @@
 	}
 }
 
+@media (max-width: 979px) {
+	.toggle-mode {
+		.modal-body {
+			.component.infobox {
+				margin-top: 10px;
+
+				.wrapper-info {
+					width: 83%;
+				}
+			}
+		}	
+	}
+}
+
 @media (max-width: 767px) {
+
+	.toggle-mode {
+		.modal-body {
+			.component.infobox {
+
+				.wrapper-info {
+					width: 60%;
+				}
+			}
+		}
+
+		&.wine_popup {
+			.modal-body {
+				.component.infobox {
+
+					.img-wrapper {
+						width: 136px;
+					}
+					.wrapper-info {
+						width: 50vw;
+						float: left;
+						position: static;
+						padding-right: 50px;
+					}
+				}
+			}
+		}
+	}
 
 	.toggle-mode .component.infobox, .component.infobox {
 
@@ -281,21 +333,38 @@
 		&.hero, &.large, &.contact {
 			.img-wrapper {
 				width: 40.5%;
-				height: 27.3vw;
+				height: 36.3vw;
 			}
 		}
 
 		.img-wrapper {
 			width: 40.5%;
-			height: 27.3vw;
+			height: 36.3vw;
 		}
 
 		.wrapper-info {
-			margin-left: 16px;
+			margin-left: 0;
 			height: 100%;
-			width: 53.5%;
+			width: 58%;
 		}
-
 	}
 
+	.toggle-mode {
+		&.wine_popup {
+			.modal-body {
+				.component.infobox {
+
+					.wrapper-info {
+						width: 80vw;
+						padding-right: 0;
+					}
+				}
+
+				.bttn {
+					bottom: auto;
+					top: 89px;
+				}
+			}
+		}
+	}
 }
