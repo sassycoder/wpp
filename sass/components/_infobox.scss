@@ -109,6 +109,32 @@
 	}
 }
 
+span.text-overlay {
+	position: absolute;
+  color: #fff;
+  font-size: 34px;
+  font-size: 3.4rem;
+  line-height: 34px;
+  line-height: 3.4rem;
+  top: 2%;
+  left: 0;
+  right: 0;
+  padding: 0 20px;
+  text-align: center;
+  z-index: 1;
+}
+
+.advert {
+	.component.infobox {
+		.wrapper-info {
+	    display: none !important
+		}
+		.img-wrapper {
+	    height: 241px
+		}
+	}
+}
+
 //toggle-mode layout
 .toggle-mode {
 	.modal-body {
@@ -189,6 +215,25 @@
 	}
 }
 
+.toggle-mode {
+	&.wine_popup {
+		.modal-body {
+			.component.infobox {
+
+				.wrapper-info {
+					width: 77%;
+					margin-left: 0;
+					padding-right: 43px;
+
+					.expand {
+						padding: 10px 0 0;
+					}
+				}
+			}
+		}
+	}
+}
+
 @media (max-width: 1023px) {
 	.component.infobox {
 		.wrapper-info {
@@ -203,6 +248,13 @@
 		&.large {
 			.img-wrapper {
 				height: 344px;
+			}
+		}
+	}
+	.advert {
+		.component.infobox {
+			.img-wrapper {
+		    height: 201px
 			}
 		}
 	}
@@ -248,6 +300,15 @@
 						padding-right: 50px;
 					}
 				}
+			}
+		}
+	}
+
+	.toggle-mode .advert, .advert {
+		.component.infobox {
+			.img-wrapper {
+		    height: 136px;
+		    width: 100%;
 			}
 		}
 	}
