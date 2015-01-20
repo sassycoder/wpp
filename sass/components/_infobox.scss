@@ -234,6 +234,8 @@ span.text-overlay {
 	}
 }
 
+@include multiline-ellipsis(66px,16px,3em);
+
 @media (max-width: 1023px) {
 	.component.infobox {
 		.wrapper-info {
