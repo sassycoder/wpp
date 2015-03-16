@@ -19,7 +19,7 @@ module.exports = function (grunt) {
           'assets/js/framework/*.js',
           'assets/js/lib/*.js'
         ],
-        tasks: ['build']
+        tasks: ['jsbuild']
       },
 
       bake: {
@@ -51,6 +51,7 @@ module.exports = function (grunt) {
       },
       library: {
         src: ['assets/js/lib/single/jquery-2.1.1.js',
+              'assets/js/lib/single/jquery.tooltipster.min.js',
               'assets/js/lib/*.js'],
         dest: 'assets/js/lib.js'
       }
@@ -78,6 +79,7 @@ module.exports = function (grunt) {
             'template4.html': 'templates/layout/template4.html',
             'template5.html': 'templates/layout/template5.html',
             'template6.html': 'templates/layout/template6.html',
+            'template7.html': 'templates/layout/template7.html',
             'lightbox.html': 'templates/layout/lightbox.html',
             'splash.html': 'templates/layout/splash.html',
             'splash-with-menu.html': 'templates/layout/splash-with-menu.html',
@@ -120,5 +122,6 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask('build', ['compass:clean', 'compass:dist', 'jshint', 'concat', 'uglify', 'bake:build', 'replace']);
+  grunt.registerTask('jsbuild', ['jshint', 'concat', 'uglify', 'bake:build']);
   grunt.registerTask('default', ['build']);
 };

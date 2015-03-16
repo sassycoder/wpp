@@ -376,3 +376,48 @@ window.rm.placeholderText = (function ($) {
     });
     
 }(jQuery));
+
+$(function () {
+    'use strict';
+
+    var $this = $(this);
+
+        $this.on('click', '.ellipsised', function (ev) {
+            ev.preventDefault();
+        });
+
+        $this.on('focus', '.ellipsised', function () {
+            $(this).tooltipster('show');
+        });
+
+        $this.on('blur', '.ellipsised', function () {
+            $(this).tooltipster('hide');
+        });
+
+    var $getEls = $('.ellipsis'),
+        getTitleW;
+
+    $getEls.each(function () {
+        var $this = $(this),
+            $getH = $this.find('.title');            
+
+        if ($getH.height() < 50) {
+            return;
+        } else {
+            $this.attr('title', $getH.html()).addClass('ellipsised');
+            getTitleW = $getH.innerWidth();
+        }        
+    });  
+
+    $('.ellipsised').tooltipster({
+        trigger: 'hover',
+        contentAsHTML: true,
+        interactive: true,
+        maxWidth: getTitleW,
+        position: 'bottom',
+        offsetY: -80,
+        functionInit: function (origin, content) {
+            return content;
+        }
+    });      
+});
