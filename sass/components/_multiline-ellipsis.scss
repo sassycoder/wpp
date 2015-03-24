@@ -4,7 +4,7 @@ $ellipsiswidth: 3em !default;
 
 	.ellipsised {
 		overflow: hidden;
-		//height: $height;
+		height: $height;
 		line-height: $lineheight;
 		padding-right: 5px; }
 
@@ -41,18 +41,14 @@ $ellipsiswidth: 3em !default;
 			background: linear-gradient(to right, rgba(255, 255, 255, 0), white 50%, white)
 	}
 
-	.ellipsised {
-		height: $height;
-	}
-
 	@media (max-width: 1023px) {
 		.ellipsised > *:first-child > .title {
 
 			&:focus, &:active {
-				position: absolute;
-				background: wheat;
-				z-index: 99;
-				padding: 5px;
+				// position: absolute;
+				// background: wheat;
+				// z-index: 99;
+				// padding: 5px;
 			}
 		}
 	}

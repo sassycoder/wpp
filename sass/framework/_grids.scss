@@ -1,8 +1,8 @@
-.framework {
+.frameworkless {
     background: url("/assets/img/grids/grid-896.png") 50% 0 repeat-y
 }
 
-.framework.gutterless {
+.frameworkless.gutterless {
     background: url("/assets/img/grids/grid-1392-gutterless.png") 50% 0 repeat-y
 }
 
@@ -23,7 +23,7 @@
 // }
 
 @media all and (max-width: 1430px) {
-    .framework {
+    .frameworkless {
         background:url("/assets/img/grids/grid-896.png") 50% 0 repeat-y
     }
 
@@ -33,35 +33,35 @@
 }
 
 @media all and (max-width: 1023px) {
-    .framework {
+    .frameworkless {
         background:url("/assets/img/grids/grid-748.png") 50% 0 repeat-y
     }
 
-    .framework.gutterless {
+    .frameworkless.gutterless {
         background: url("/assets/img/grids/grid-744-gutterless.png") 50% 0 repeat-y
     }
 }
 
 @media all and (max-width: 767px) {
-    .framework {
+    .frameworkless {
         background:url("/assets/img/grids/grid-300-12.png") 50% 0 repeat-y;
         background-size: 100%
     }
 
-    .framework.gutterless {
+    .frameworkless.gutterless {
         background: url("/assets/img/grids/grid-300-12-gutterless.png") 50% 0 repeat-y;
         background-size: 100%
     }
 }
 
 @media all and (max-width: 480px) {
-    .framework {
+    .frameworkless {
         background:url("/assets/img/grids/grid-300-12.png") 0 0 repeat-y;
         width: 100%;
         background-size: 100%
     }
 
-    .framework.gutterless {
+    .frameworkless.gutterless {
         background: url("/assets/img/grids/grid-300-12-gutterless.png") 0 0 repeat-y;
         width: 100%;
         background-size: 100%

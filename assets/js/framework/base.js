@@ -412,7 +412,7 @@ $(function () {
     $('.ellipsised').tooltipster({
         trigger: 'hover',
         contentAsHTML: true,
-        interactive: true,
+        interactive: false,
         maxWidth: getTitleW,
         position: 'bottom',
         offsetY: -80,

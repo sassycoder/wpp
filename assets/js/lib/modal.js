@@ -6,7 +6,7 @@ jQuery(document).ready(function($) {
 		jQuery('#alimir_bootmodal').modal('show');
 	});
 	$('.add-more').click(function(){
-		jQuery('#add_more_popup').modal('show');
+		jQuery(this).next('.add_more_popup').modal('show');
 	});
 	$('.wine').click(function(){
 		jQuery('#wine_popup').modal('show');
