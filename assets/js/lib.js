@@ -16189,7 +16189,7 @@ jQuery(document).ready(function($) {
 		jQuery(this).next('.add_more_popup').modal('show');
 	});
 	$('.wine').click(function(){
-		jQuery('#wine_popup').modal('show');
+		jQuery('#wine_popup').addClass('animated').modal('show');
 	});
 	$('.register-link').click(function(){
 		$('.tab-content .tab-pane').removeClass('active');

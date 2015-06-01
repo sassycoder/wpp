@@ -80,6 +80,25 @@ body {
     background: #fff;
     letter-spacing: 0;
     overflow-x: visible!important;
+
+    &.xmas1 {
+      background: url('/assets/img/structure/xmas-bg1.png') repeat left top transparent;
+    }
+
+    &.xmas2 {
+      background: url('/assets/img/structure/xmas-bg2.png') repeat left top transparent;
+    }
+
+    &.xmas1, &.xmas2 {
+      header {
+        background: transparent;
+        border-bottom: 5px solid white;
+      }
+
+      h3 {
+        color: #fff;
+      }
+    }
 }
 
 a {

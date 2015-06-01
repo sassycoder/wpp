@@ -19,7 +19,7 @@ $ellipsiswidth: 3em !default;
 		margin-left: -5px; }
 
 	.ellipsised > *:first-child > .title {
-		word-break: break-all;
+		word-break: break-word;
 		cursor: default;
 	}
 

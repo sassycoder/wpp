@@ -1,0 +1,35 @@
+.component.xmas-image {
+	.image {
+		border-left: 5px solid;
+	}
+
+	&.no1 {
+		.image {border-color: #c9531b;}
+	}
+	&.no2 {
+		.image {border-color: #c9531b;}
+	}
+	&.no3 {
+		.image {border-color: #7d2359;}
+	}
+	&.no4 {
+		.image {border-color: #be264d;}
+	}
+	&.no5 {
+		.image {border-color: #b07521;}
+	}
+	&.no6 {
+		.image {border-color: #006c7d;}
+	}
+
+	h3 {
+		width: 100%;
+		text-align: center;
+		margin-bottom: 10px;
+
+	}
+}
+
+.xmas-home {
+	margin-top: 20px;
+}
