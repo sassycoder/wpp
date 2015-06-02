@@ -1,3 +1,235 @@
+.xmas15 {
+
+	&.bg-fullpage {
+		background: url('/assets/img/structure/xmas-bg.png') repeat left top transparent;
+ 		background-size: contain;
+	}
+
+	.wrapper {
+		height: auto;
+  	position: relative;
+	}
+
+  h2 {
+  	font-family: 'WaitroseGonte';
+  }
+
+  header {
+    background: url('/assets/img/structure/xmas-bg.png') repeat left top transparent;
+ 		background-size: contain;
+    border-bottom: 5px solid white;
+
+    a {
+    	&:hover, &:focus, &:active {
+    		color: #f69f3c;
+    	}
+    }
+
+    .wrapper-header h1 em {
+    	font-family: 'Didot';
+    	font-style: normal;
+    	font-weight: bold;
+    }
+  }
+
+  h3 {
+    color: #fff;
+  }
+
+	footer {
+		background-color: #cc110f;
+		margin-top: 0;
+		position: relative;
+
+		.social-icon {
+	    color: #002855;
+
+	    &:hover, &:active, &:focus {
+	      background-color: #002855;
+	      color: #fff;
+	    }
+	  }
+	}
+
+	.bttn {
+		color: #575756;
+		background: #fff;
+		border: 1px solid #575756;
+
+		&:hover, &:active, &:focus {
+			background-color: #1b204d;
+			color: #fff;
+		}
+
+
+		&.secondary {
+			color: #575756;
+			&:hover, &:active, &:focus {
+				background-color: #abb3c4;
+			}
+		}
+		&.active {
+			background-color: #abb3c4;
+			color: #575756;
+		}
+	}
+
+	.btn-primary {
+		background-color: #fff;
+
+		&:hover, &:active, &:focus {
+			background-color: #f69f3c;
+		}
+	}
+
+	.component.lightbox-pagination {
+
+			&.top, &.bottom {
+				border-color: #abb3c4;
+			}
+
+			.bttn {
+				color: #575756;
+
+				&:hover, &:active, &:focus, &.active {
+					background-color: #1b204d;
+					color: #fff;
+				}
+			}
+
+			.export-buttons .bttn {
+				color: #fff;
+
+				&:hover, &:active, &:focus, &.active {
+					background-color: #fff;
+					color: #575756;
+				}
+			}
+	}
+
+	.component.lightbox-item {
+
+		.bttn {
+			color: #575756;
+
+			&:hover, &:active, &:focus, &.active {
+				color: #fff;
+				background-color: #1b204d;
+			}
+		}
+
+		.export-buttons {
+			.bttn {
+				background-color: #abb3c4;
+				color: #fff;
+				border-color: #fff;
+
+				&:hover, &:active, &:focus {
+					background-color: #fff;
+					color: #575756;
+				}
+			}
+		}
+	}
+
+	.bttn.export-item {
+
+	  background-color: #abb3c4;
+	  color: #fff;
+	  border-color: #fff;
+
+		&:last-child {
+			border: 1px solid #fff
+		}
+	}
+
+	.megamenu-container ol .site-section {
+
+		min-width: 110px;
+		font-size: 17px;
+		font-size: 1.7rem;
+		line-height: 17px;
+		line-height: 1.7rem;
+
+		>a {
+			background-color: #c74d07;
+			padding: 14px 11px 14px 17px;
+		}
+
+		&.first {
+			.menu-items li {  }
+		}
+
+		&.second {
+			>a { background-color: #627937; }
+
+			.inner ul li a {
+				color: #627937;
+			}
+		}
+
+		&.third {
+			>a { background-color: #812052; }
+
+			.inner ul li a {
+				color: #812052;
+			}
+		}
+
+		&.fourth {
+			>a { background-color: #cc110f; }
+
+			.inner ul li a {
+				color: #cc110f;
+			}
+		}
+
+		&.fifth {
+			>a { background-color: #b6780b; }
+
+			.inner ul li a {
+				color: #b6780b;
+			}
+		}
+
+		&.sixth {
+			>a { background-color: #00657a; }
+
+			.inner ul li a {
+				color: #00657a;
+			}
+		}
+
+	 .inner {
+			background-image:none;
+			padding-bottom: 10px;
+
+			ul li a {
+				color: #c74d07;
+
+				&:hover, &:focus, &:active {
+					color: #000;
+				}
+			}
+		}
+	}
+	.nav { 
+		.search {
+			font-size: 17px;
+		  font-size: 1.7rem;
+		  line-height: 17px;
+		  line-height: 1.7rem;
+
+		  .global-search {
+		  	height: 45px;
+		  }
+
+		  &.search-on .show-search {
+		  	height: 45px;
+		  }
+		}
+
+	}
 .component.xmas-image {
 	.image {
 		border-left: 5px solid;
@@ -7,7 +239,7 @@
 		.image {border-color: #c9531b;}
 	}
 	&.no2 {
-		.image {border-color: #c9531b;}
+		.image {border-color: #659032;}
 	}
 	&.no3 {
 		.image {border-color: #7d2359;}
@@ -23,6 +255,12 @@
 	}
 
 	h3 {
+		font-family: 'WaitroseGonte';
+  	font-size: 27px;
+  	font-size: 2.7rem;
+  	line-height: 32px;
+  	line-height: 3.2rem;
+  	letter-spacing: 2px;
 		width: 100%;
 		text-align: center;
 		margin-bottom: 10px;
@@ -33,3 +271,187 @@
 .xmas-home {
 	margin-top: 20px;
 }
+
+.component.filters {
+		.facets {
+			overflow: hidden!important;
+			background-color: #fff;
+			border: 1px solid;
+	  	box-sizing: content-box;
+	  	background-image: url("/assets/img/structure/black-line.png");
+
+	  	h3, h3 a {
+	  		color: #575756;
+	  	}
+	  	h3 {
+	  		border-color: #575756;
+	  	}
+		}
+
+		#Stage {
+			display: none;
+		}
+
+		.bttn {
+			background-color: #fff;
+			border-color: #575756;
+			color: #575756;
+
+			&.reset {
+				background-color: #fff;
+			}
+
+			&:hover, &:focus, &:active, &.active {
+				background-color: #abb3c4;
+				color: #575756;
+			}
+		}
+
+		.close {
+			top: 5px;
+	  	right: 10px;
+			background-color: #575756;
+			width: 38px;
+
+			&:hover, &:focus, &:active {
+				background-color: #abb3c4;
+			}
+		}
+
+		.irs-slider {
+		  background: #575756;
+		  border-color: #575756;
+		}
+
+		.irs-line {
+			border-color: #d5d8e1;
+			background: #e0e8f1;
+		}
+
+		.irs-bar {
+			border-color: #d5d8e1;
+	  	background: #002855;
+		}
+
+		.rose {
+			display: none;
+		}
+	}
+
+	.modal-header .close {
+		background-color: #575756;
+
+		&:hover, &:focus, &:active {
+			background-color: #abb3c4;
+		}
+	}
+
+	.component.infobox {
+		.bttn {
+			background-color: #abb3c4;
+			color: #fff;
+
+			&:hover, &:active, &:focus {
+				background-color: #f69f3c;
+			}
+		}
+	}
+
+	.owl-theme .owl-controls .owl-buttons div {
+		background: #002855;
+	}
+
+	#alimir_bootmodal {
+		background-color: #cc110f;
+
+		a {
+			color: #fff;
+		}
+
+		.modal-body, .modal-footer {
+			color: #fff;
+		}
+
+		.component.infobox .bttn {
+			background-color: #cc110f;
+  		color: #fff;
+
+  		&:hover, &:active, &:focus {
+				background-color: #f69f3c;
+			}
+		}
+	}
+
+	@media only screen and (max-width: 1023px) {
+		.megamenu-container ol .site-section {
+
+			.inner {
+				padding-top: 0;
+				padding-bottom: 0;
+
+				ul li a {
+				  color: #333!important;
+				}
+			}
+
+			&.first {
+				.menu-items li { background-color: #fdd5be; }
+			}
+
+			&.second {
+				.menu-items li { background-color: #e1e5d8; }
+			}
+
+			&.third {
+				.menu-items li { background-color: #f4ecf0; }
+			}
+
+			&.fourth {
+				.menu-items li { background-color: #fcf4f3; }
+			}
+
+			&.fifth {
+				.menu-items li { background-color: #faf5ee; }
+			}
+
+			&.sixth {
+				.menu-items li { background-color: #e0ecef; }
+			}
+		}
+	}
+
+	@media only screen and (max-width: 767px) {
+		.component.filters {
+			.bttn {
+				border: 0;
+
+				&.reset {
+					background-color: #abb3c4;
+					border-color: #575756;
+					color: #575756;
+				}
+			}
+
+		 .facets {
+				border: 0;
+
+				h3 {
+				  background: #abb3c4;
+
+				  a.active {
+				  	background: #dde0e7;
+				  }
+				}
+				.panel {
+					&.themes, &.type {
+						.bttn { border: 1px solid; }
+					}
+				}
+			}
+		}
+	}
+
+
+
+
+} /* .xmas15 */

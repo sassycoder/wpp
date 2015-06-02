@@ -75,50 +75,18 @@
     url('../fonts/glyphicons-halflings-regular.ttf')  format('truetype');
 }
 
-// START Fuzzy rendering fix for chrome http://sassycoder.wordpress.com/2013/11/16/font-face-rendering-issue-in-chrome-2/
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-    @font-face {
-        font-family: 'Waitrose-Bold';
-        src: url('../fonts/WaitrBol.svg#Waitrose-Bold') format('svg');
-    }
-
-    @font-face {
-        font-family: 'Waitrose-Light';
-        src: url('../fonts/WaitrLig.svg#Waitrose-Light') format('svg');
-    }
-
-    @font-face {
-        font-family: 'Waitrose-Logofont';
-        src: url('../fonts/WaitrLog.svg#Waitrose-Logofont') format('svg');
-    }
-
-    @font-face {
-        font-family: 'WaitroseHandscript';
-        src: url('../fonts/WaitroseHandscript.svg#WaitroseHandscript') format('svg');
-    }
-
-    @font-face {
-        font-family: 'Waitrose-Regular';
-        src: url('../fonts/WaitrReg.svg#Waitrose-Regular') format('svg');
-    }
-
-    @font-face {
-        font-family: 'ElegantIcons';
-        src: url('../fonts/ElegantIcons.svg#ElegantIcons') format('svg');
-    }
-
-    @font-face {
-        font-family: 'dripicons';
-        src: url('../fonts/dripicons.svg#dripicons') format('svg');
-    }
-
-    @font-face {
-        font-family: 'GlyphiconsRegular';
-        src: url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
-    }
+@font-face {
+    font-family: 'WaitroseGonte';
+    src: url('../fonts/waitrosegonte.ttf')  format('truetype');
 }
 
-//END Chrome fix
+@font-face {
+    font-family: 'Didot';
+    src: url('../fonts/didot.eot');
+    src: url('../fonts/didot.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/didot.woff') format('woff'),
+    url('../fonts/didot.ttf')  format('truetype');
+}
 
 // GLYPH ICONS
 

@@ -82,10 +82,17 @@ module.exports = function (grunt) {
             'template7.html': 'templates/layout/template7.html',
             'template8.html': 'templates/layout/template8.html',
             'template9.html': 'templates/layout/template9.html',
+            'template10.html': 'templates/layout/template10.html',
+            'template11.html': 'templates/layout/template11.html',
+            'template12.html': 'templates/layout/template12.html',
+            'template13.html': 'templates/layout/template13.html',
+            'template14.html': 'templates/layout/template14.html',
             'lightbox.html': 'templates/layout/lightbox.html',
+            'lightbox-xmas.html': 'templates/layout/lightbox-xmas.html',
             'splash.html': 'templates/layout/splash.html',
             'splash-with-menu.html': 'templates/layout/splash-with-menu.html',
             'modal.html': 'templates/components/modal.html',
+            'modal-xmas.html': 'templates/components/modal-xmas.html',
             'infobox.html': 'templates/components/infobox.html',
             'filters.html': 'templates/components/filters.html',
             'buttons.html': 'templates/components/buttons.html',
@@ -93,7 +100,8 @@ module.exports = function (grunt) {
             'lightbox-item.html': 'templates/components/lightbox-item.html',
             'layout_test.html': 'templates/layout/layout_test.html',
             'layout_test2.html': 'templates/layout/layout_test2.html',
-            'contact.html': 'templates/layout/contact.html'
+            'contact.html': 'templates/layout/contact.html',
+            'contact-xmas.html': 'templates/layout/contact-xmas.html'
         }
       }
     },
