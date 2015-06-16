@@ -101,7 +101,8 @@ module.exports = function (grunt) {
             'layout_test.html': 'templates/layout/layout_test.html',
             'layout_test2.html': 'templates/layout/layout_test2.html',
             'contact.html': 'templates/layout/contact.html',
-            'contact-xmas.html': 'templates/layout/contact-xmas.html'
+            'contact-xmas.html': 'templates/layout/contact-xmas.html',
+            'password-reset.html': 'templates/layout/password-reset.html'
         }
       }
     },

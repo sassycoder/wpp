@@ -508,6 +508,18 @@ footer {
   }
 }
 
+.reset-pwrd {
+  input {
+    &[type='password'] {
+      line-height: 22px;
+      padding: 16px 6px;
+      margin: 5px 0 30px;
+      font-size: 14px;
+      font-size: 1.4rem;
+    }
+  }  
+}
+
 .show-on-mobile {
   display: none;
 }

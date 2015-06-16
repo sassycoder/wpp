@@ -82,6 +82,19 @@
 		}
 	}
 
+	.reset-pwrd {
+	  input {
+	    &[type='password'] {
+	      border: 1px solid #002855;
+	    }
+	  }
+
+	  .btn-primary {
+	    background-color: #cc110f;
+	    color: #ffffff;
+	  }
+	}
+
 	.component.lightbox-pagination {
 
 			&.top, &.bottom {
@@ -213,7 +226,7 @@
 			}
 		}
 	}
-	.nav { 
+	.nav {
 		.search {
 			font-size: 17px;
 		  font-size: 1.7rem;
