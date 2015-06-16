@@ -194,7 +194,8 @@
   color: #000;
 }
 
-.modal .row-fluid [class*=span] {
+.modal .row-fluid [class*=span],
+.modal [type='text'] {
   min-height: 40px;
 }
 
