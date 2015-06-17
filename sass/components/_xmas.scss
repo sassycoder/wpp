@@ -465,3 +465,10 @@
 		}
 	}
 } /* .xmas15 */
+
+@-moz-document url-prefix() {
+  .xmas15.bg-fullpage,
+  .xmas15 header {
+     background-size: auto;
+  }
+}
