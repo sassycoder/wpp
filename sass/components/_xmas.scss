@@ -50,6 +50,13 @@
 			color: #ffffff;
 		}
 
+		.login-link {
+			background-color: #abb3c4;
+			color: #ffffff;
+		}
+
+
+		
 		.push {
 			height: 500px;
 		}
@@ -231,7 +238,7 @@
 
 		ol .site-section {
 
-			min-width: 91px;
+			min-width: 101px;
 			font-size: 17px;
 			font-size: 1.7rem;
 			line-height: 17px;
@@ -290,11 +297,15 @@
 				background-image:none;
 				padding-bottom: 10px;
 
-				ul li a {
-					color: #c74d07;
+				ul li {
+					padding-left: 2px;
+					a {
+						color: #c74d07;
+						padding-right: 3px;
 
-					&:hover, &:focus, &:active {
-						color: #000;
+						&:hover, &:focus, &:active {
+							color: #000;
+						}
 					}
 				}
 			}
