@@ -5,6 +5,56 @@
  		background-size: contain;
 	}
 
+	.wrapper-header.main {
+		position: relative;
+	}
+
+	&.no-header {
+		header {
+			border: 0;
+
+			.wrapper-header,
+			.nav.main {
+				visibility: hidden;
+			}
+		}
+
+		&.splash {
+			.splash-page {
+				margin-top: 0;
+			}
+		}
+	}
+
+	&.splash {
+
+		.splash-page {
+			margin-top: 100px;
+
+			h1 {
+				height: 0px;
+				text-indent: -9999px;
+			}
+		}
+
+		.action-btns {
+			text-align: center;
+
+			.bttn {
+				border: 0;
+			}
+		}
+
+		.register-link {
+			background-color: #cc110f;
+			color: #ffffff;
+		}
+
+		.push {
+			height: 500px;
+		}
+	}
+
 	.wrapper {
 		height: auto;
   	position: relative;
@@ -18,6 +68,8 @@
     background: url('/assets/img/structure/xmas-bg.png') repeat left top transparent;
  		background-size: contain;
     border-bottom: 5px solid white;
+    padding-top: 120px;
+    padding-top: 7vw;
 
     a {
     	&:hover, &:focus, &:active {
@@ -30,9 +82,15 @@
     	font-style: normal;
     	font-weight: bold;
     }
+
+    .flow-wrapper {
+	  	position: absolute;
+	  	top: 0;
+	  }
   }
 
-  h3 {
+  h3,
+  .modal.alternative .modal-header h3 {
     color: #fff;
   }
 
@@ -40,6 +98,12 @@
 		background-color: #cc110f;
 		margin-top: 0;
 		position: relative;
+		overflow: visible;
+
+		.flow-wrapper {
+			position: absolute;
+			bottom: 100%;
+		}
 
 		.social-icon {
 	    color: #002855;
@@ -156,72 +220,82 @@
 		}
 	}
 
-	.megamenu-container ol .site-section {
+	.megamenu-container {
+		.mega-btn {
+			top: 68px;
 
-		min-width: 91px;
-		font-size: 17px;
-		font-size: 1.7rem;
-		line-height: 17px;
-		line-height: 1.7rem;
-
-		>a {
-			background-color: #c74d07;
-			padding: 14px 11px 14px 17px;
-		}
-
-		&.first {
-			.menu-items li {  }
-		}
-
-		&.second {
-			>a { background-color: #627937; }
-
-			.inner ul li a {
-				color: #627937;
+			&:before {
+				display: none;
 			}
 		}
 
-		&.third {
-			>a { background-color: #812052; }
+		ol .site-section {
 
-			.inner ul li a {
-				color: #812052;
+			min-width: 91px;
+			font-size: 17px;
+			font-size: 1.7rem;
+			line-height: 17px;
+			line-height: 1.7rem;
+
+			>a {
+				background-color: #c74d07;
+				padding: 14px 11px 14px 17px;
 			}
-		}
 
-		&.fourth {
-			>a { background-color: #cc110f; }
-
-			.inner ul li a {
-				color: #cc110f;
+			&.first {
+				.menu-items li {  }
 			}
-		}
 
-		&.fifth {
-			>a { background-color: #b6780b; }
+			&.second {
+				>a { background-color: #627937; }
 
-			.inner ul li a {
-				color: #b6780b;
+				.inner ul li a {
+					color: #627937;
+				}
 			}
-		}
 
-		&.sixth {
-			>a { background-color: #00657a; }
+			&.third {
+				>a { background-color: #812052; }
 
-			.inner ul li a {
-				color: #00657a;
+				.inner ul li a {
+					color: #812052;
+				}
 			}
-		}
 
-	 .inner {
-			background-image:none;
-			padding-bottom: 10px;
+			&.fourth {
+				>a { background-color: #cc110f; }
 
-			ul li a {
-				color: #c74d07;
+				.inner ul li a {
+					color: #cc110f;
+				}
+			}
 
-				&:hover, &:focus, &:active {
-					color: #000;
+			&.fifth {
+				>a { background-color: #b6780b; }
+
+				.inner ul li a {
+					color: #b6780b;
+				}
+			}
+
+			&.sixth {
+				>a { background-color: #00657a; }
+
+				.inner ul li a {
+					color: #00657a;
+				}
+			}
+
+		 .inner {
+				background-image:none;
+				padding-bottom: 10px;
+
+				ul li a {
+					color: #c74d07;
+
+					&:hover, &:focus, &:active {
+						color: #000;
+					}
 				}
 			}
 		}
@@ -243,6 +317,7 @@
 		}
 
 	}
+
 .component.xmas-image {
 	.image {
 		border-left: 5px solid;
@@ -279,6 +354,10 @@
 		margin-bottom: 10px;
 
 	}
+}
+
+.toggle-mode .modal-body .component.infobox {
+	color: #000;
 }
 
 .xmas-home {
@@ -435,6 +514,19 @@
 	}
 
 	@media only screen and (max-width: 767px) {
+
+		&.splash {
+			.wrapper {
+				margin: 0 auto -90px;
+			}
+			.push {
+				height: 355px;
+			}
+		}
+
+		#primary-navigation.megamenu-container .mega-btn {
+			top: -2px;
+		}
 		.component.filters {
 			.bttn {
 				border: 0;
@@ -462,7 +554,7 @@
 					}
 				}
 			}
-		}
+		}		
 	}
 } /* .xmas15 */
 

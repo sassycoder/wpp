@@ -102,7 +102,9 @@ module.exports = function (grunt) {
             'layout_test2.html': 'templates/layout/layout_test2.html',
             'contact.html': 'templates/layout/contact.html',
             'contact-xmas.html': 'templates/layout/contact-xmas.html',
-            'password-reset.html': 'templates/layout/password-reset.html'
+            'password-reset.html': 'templates/layout/password-reset.html',
+            'splash-with-menu-xmas.html': 'templates/layout/splash-with-menu-xmas.html',
+            'splash-xmas.html': 'templates/layout/splash-xmas.html'
         }
       }
     },
