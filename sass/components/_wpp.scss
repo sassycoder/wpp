@@ -1,5 +1,5 @@
 .wpp {
-	.v1, .v2, .v3, .v4 {
+	.v1, .v2, .v3, .v4, .v5 {
 		&.row {
 			.pane {
 				margin: 0;
@@ -115,7 +115,7 @@
 
 @media all and (max-width: 1023px) {
 	.wpp {
-		.v1, .v2, .v3, .v4 {
+		.v1, .v2, .v3, .v4, .v5 {
 			&.row {
 				.pane {
 					margin-bottom: 12px;

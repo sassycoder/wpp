@@ -28,6 +28,8 @@
 
 	&.splash {
 
+		.flow-wrapper { overflow: visible; }
+
 		.splash-page {
 			margin-top: 100px;
 
@@ -75,8 +77,9 @@
     background: url('/assets/img/structure/xmas-bg.png') repeat left top transparent;
  		background-size: contain;
     border-bottom: 5px solid white;
-    padding-top: 120px;
-    padding-top: 7vw;
+    padding-top: 140px;
+    padding-top: 8.5vw;
+    position: relative;
 
     a {
     	&:hover, &:focus, &:active {
@@ -93,6 +96,12 @@
     .flow-wrapper {
 	  	position: absolute;
 	  	top: 0;
+	  	bottom: 0;
+	  	left: 0;
+	  	right: 0;
+	  	height: auto!important;
+	  	width: auto!important;
+	  	overflow: hidden;
 	  }
   }
 
@@ -229,7 +238,7 @@
 
 	.megamenu-container {
 		.mega-btn {
-			top: 68px;
+			top: 79px;
 
 			&:before {
 				display: none;
@@ -487,39 +496,45 @@
 	}
 
 	@media only screen and (max-width: 1023px) {
-		.megamenu-container ol .site-section {
+		.megamenu-container {
 
-			.inner {
-				padding-top: 0;
-				padding-bottom: 0;
+			.megamenu-list {
+				position: fixed;
+			}
 
-				ul li a {
-				  color: #333!important;
+			ol .site-section {
+				.inner {
+					padding-top: 0;
+					padding-bottom: 0;
+
+					ul li a {
+					  color: #333!important;
+					}
 				}
-			}
 
-			&.first {
-				.menu-items li { background-color: #fdd5be; }
-			}
+				&.first {
+					.menu-items li { background-color: #fdd5be; }
+				}
 
-			&.second {
-				.menu-items li { background-color: #e1e5d8; }
-			}
+				&.second {
+					.menu-items li { background-color: #e1e5d8; }
+				}
 
-			&.third {
-				.menu-items li { background-color: #f4ecf0; }
-			}
+				&.third {
+					.menu-items li { background-color: #f4ecf0; }
+				}
 
-			&.fourth {
-				.menu-items li { background-color: #fcf4f3; }
-			}
+				&.fourth {
+					.menu-items li { background-color: #fcf4f3; }
+				}
 
-			&.fifth {
-				.menu-items li { background-color: #faf5ee; }
-			}
+				&.fifth {
+					.menu-items li { background-color: #faf5ee; }
+				}
 
-			&.sixth {
-				.menu-items li { background-color: #e0ecef; }
+				&.sixth {
+					.menu-items li { background-color: #e0ecef; }
+				}
 			}
 		}
 	}
@@ -566,6 +581,13 @@
 				}
 			}
 		}		
+	}
+
+	@media only screen and (max-width: 480px) {
+		.wrapper-header h1 {
+			font-size: 15px;
+			font-size: 1.5rem;
+		}
 	}
 } /* .xmas15 */
 
