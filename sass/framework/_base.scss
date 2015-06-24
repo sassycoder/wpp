@@ -404,7 +404,7 @@ header {
     }    
 }
 
-.nav {
+.nav, .header-actions {
   color: #fff;
 
   .search {
@@ -460,6 +460,23 @@ header {
           right: 11px;
           top: 11px;
         }
+      }
+    }
+  }
+}
+
+.header-actions {
+  .search {
+    min-height: 46px;
+    line-height: 38px;
+    line-height: 3.8rem;
+    margin-top: 10px;
+
+    &.search-on { margin-top: 10px; }
+
+    .show-search {
+      &:before {
+        top: 10px;
       }
     }
   }
